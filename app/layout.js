@@ -1,7 +1,15 @@
-import { Inter } from 'next/font/google'
+import { Inter, Istok_Web, Ibarra_Real_Nova } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const istok = Istok_Web({
+   subsets: ['latin'],
+    variable: "--font--istok",
+     weight: ["400","700"], 
+    })
+
+const ibara = Ibarra_Real_Nova({ 
+  subsets: ['latin'], 
+  variable: "--font--ibara" })
 
 export const metadata = {
   title: 'Jamhuri Day',
@@ -10,8 +18,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className=''>{children}</body>
+    <html lang="en" className={`${ibara.variable} ${istok.variable}` }>
+      <body >{children}</body>
     </html>
   )
 }

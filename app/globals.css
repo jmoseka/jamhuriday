@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -28,6 +26,18 @@
     rgb(var(--background-start-rgb));
 } */
 
- body {
+body {
   background: black;
+}
+
+section {
+  @apply text-[#e6e6e6] flex flex-col;
+}
+
+.line {
+  @apply pt-20 pb-12 w-full;
+}
+
+.line span {
+  @apply block w-full h-[0.08px] bg-[#333333];
 }

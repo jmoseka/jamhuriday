@@ -6,7 +6,7 @@ export default function Home() {
     <main className="flex min-h-screen w-full 
     flex-col items-center justify-between px-3 font-istok">
 
-      <section className="hero-section h-[90vh] w-full text-white border border-purple-900 ">
+      <section className="hero-section h-[90vh] w-full  border border-purple-900 ">
         <div className='hero w-full border pt-48
          border-red-700 text-center'>
           <h1 className='uppercase text-2xl font-ibara'>In the shadows of freedom</h1>
@@ -14,13 +14,66 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='text-white'>
+      <section className=''>
+        <div className='line'>
+          <span className=''></span>
+        </div>
         <IntroText
           title="1000BC - 19TH CE"
           subtitle="Pre-colonial era"
           desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
         />
 
+      </section>
+
+      <section className=''>
+      <div className='line'>
+          <span></span>
+        </div>
+
+        <IntroText
+          title="1900 - 1963"
+          subtitle="Colonial Rule and Resistance Movements"
+          desc="This timeline highlights the period of British colonial rule, which lasted from the late 19th century until Kenya's independence in 1963. It includes the struggles and resistance against colonial oppression and exploitation."
+        />
+      </section>
+
+      <section className=''>
+
+      <div className='line'>
+          <span></span>
+        </div>
+
+        <IntroText
+          title="1960 - 1962"
+          subtitle="Path To Independence"
+          desc="This timeline covers the series of events, negotiations, and political developments that ultimately led to Kenya's independence. It includes key figures like Jomo Kenyatta and the Lancaster House Conference of 1960-1962."
+        />
+      </section>
+
+      <section className=''>
+
+      <div className='line'>
+          <span></span>
+        </div>
+      
+        <IntroText
+          title="December 12, 1964"
+          subtitle="Jamhuri Day Declaration"
+          desc="This timeline celebrates the day the Kenyan flag was raised, and the country's first president, Jomo Kenyatta, took office. These timelines provide a historical context for the significance of Jamhuri Day and help Kenyans reflect on the journey toward self-governance and the birth of their republic."
+        />
+      </section>
+
+      <section className=''>
+      <div className='line'>
+          <span></span>
+        </div>
+
+        <IntroText
+          title="Present Day"
+          subtitle="A sorveign country"
+          desc="Since Jamhuri Day on December 12, 1964, when Kenya became a republic, there have been several indicators and events that demonstrate the country's status as a self-governing and independent nation. Some of these include:"
+        />
       </section>
 
     </main>

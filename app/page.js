@@ -1,8 +1,15 @@
 import IntroText from '@/components/IntroText'
 import PreCard from '@/components/PreCard'
+import ResistantCard from '@/components/ResistantCard'
 import Image from 'next/image'
 
 export default function Home() {
+  const mauMauText = `The Mau Mau movement was a significant anti-colonial uprising in Kenya during the 1950s against British colonial rule.
+  It was primarily led by the Kikuyu people, Kenya's largest ethnic group, who sought independence and the return of their land, which had been taken by British settlers.
+  The movement was named after the secret society known as "Mau Mau," which played a key role in organizing resistance against colonialism.
+  The Mau Mau movement was characterized by guerrilla warfare, strikes, protests, and acts of defiance against the British authorities and their loyalist allies.
+  The British responded to the uprising with a heavy-handed crackdown, declaring a state of emergency in 1952. They carried out mass arrests, detentions, torture, and executions.
+  The Mau Mau uprising ultimately played a crucial role in Kenya's struggle for independence. It brought international attention to the injustices of colonialism and contributed significantly to the push for Kenya's eventual independence, which was achieved in 1963.`;
   return (
     <main className="flex min-h-screen w-full 
     flex-col items-center justify-between px-3 font-istok">
@@ -57,6 +64,8 @@ export default function Home() {
 
       </section>
 
+      {/* section resistant groups */}
+
       <section className=''>
         <div className='line'>
           <span></span>
@@ -67,6 +76,16 @@ export default function Home() {
           subtitle="Colonial Rule and Resistance Movements"
           desc="This timeline highlights the period of British colonial rule, which lasted from the late 19th century until Kenya's independence in 1963. It includes the struggles and resistance against colonial oppression and exploitation."
         />
+
+        <div className='flex pt-14'>
+          <article>
+            <ResistantCard
+            title='Mau Mau Rebellion'
+            desc={mauMauText}
+            />
+          </article>
+        </div>
+
       </section>
 
       <section className=''>

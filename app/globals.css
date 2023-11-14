@@ -54,3 +54,9 @@ section {
 .pre-cardline span {
   @apply block w-14 h-[2px] bg-[#333333];
 }
+
+
+/* Resistant groups style*/
+.resistant-line {
+  @apply block w-auto h-[2px] bg-[#333333];
+}

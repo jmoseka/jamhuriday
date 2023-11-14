@@ -31,11 +31,11 @@ body {
 }
 
 section {
-  @apply text-[#e6e6e6] flex flex-col;
+  @apply text-[#e6e6e6] flex flex-col pt-24;
 }
 
 .line {
-  @apply pt-20 pb-12 w-full;
+  @apply px-1 pb-12 w-full;
 }
 
 .line span {
@@ -43,12 +43,14 @@ section {
 }
 
 /* Precolonial section style*/
-.pre-cardline {
+.section-body-content {
+  @apply pt-20;
+}
 
+.pre-cardline {
+  @apply pb-7 w-full;
 }
 
 .pre-cardline span {
-  @apply block w-full h-[0.08px] bg-[#333333];
+  @apply block w-14 h-[2px] bg-[#333333];
 }
-
-

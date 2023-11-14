@@ -15,7 +15,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=''>
+      <section className='flex flex-col'>
         <div className='line'>
           <span className=''></span>
         </div>
@@ -31,15 +31,29 @@ export default function Home() {
             <div className='pre-cardline'>
               <span className=''></span>
             </div>
-            
+
             <PreCard
               title='Social Structures'
               desc='Several indigenous societies and kingdoms flourished, such as the Kikuyu, Kamba, Luo, Maasai, and many others. They had had well-defined social structures. Evidence of chiefs, elders, and councils for decision-making and conflict resolution can be found in historical accounts and oral traditions.'
             />
           </article>
 
+          <article className='section-body-content'>
+            <div className='pre-cardline'>
+              <span className=''></span>
+            </div>
+            
+            <PreCard
+              title='Religion and Spirtuality'
+              desc='Indigenous belief systems and spiritual practices were an integral part of African traditional societies. Evidence of sacred sites, rituals, and religious artifacts demonstrates their spiritual traditions.'
+            />
+          </article>
 
         </div>
+
+       <div className='pt-12  self-end'>
+       <button type='button' className='w-14 h-14 border rounded-full text-white text-sm'>NEXT</button>
+       </div>
 
       </section>
 

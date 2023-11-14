@@ -1,4 +1,5 @@
 import IntroText from '@/components/IntroText'
+import PreCard from '@/components/PreCard'
 import Image from 'next/image'
 
 export default function Home() {
@@ -24,10 +25,26 @@ export default function Home() {
           desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
         />
 
+        <div className='section-body'>
+
+          <article className='section-body-content'>
+            <div className='pre-cardline'>
+              <span className=''></span>
+            </div>
+            
+            <PreCard
+              title='Social Structures'
+              desc='Several indigenous societies and kingdoms flourished, such as the Kikuyu, Kamba, Luo, Maasai, and many others. They had had well-defined social structures. Evidence of chiefs, elders, and councils for decision-making and conflict resolution can be found in historical accounts and oral traditions.'
+            />
+          </article>
+
+
+        </div>
+
       </section>
 
       <section className=''>
-      <div className='line'>
+        <div className='line'>
           <span></span>
         </div>
 
@@ -40,7 +57,7 @@ export default function Home() {
 
       <section className=''>
 
-      <div className='line'>
+        <div className='line'>
           <span></span>
         </div>
 
@@ -53,10 +70,10 @@ export default function Home() {
 
       <section className=''>
 
-      <div className='line'>
+        <div className='line'>
           <span></span>
         </div>
-      
+
         <IntroText
           title="December 12, 1964"
           subtitle="Jamhuri Day Declaration"
@@ -65,7 +82,7 @@ export default function Home() {
       </section>
 
       <section className=''>
-      <div className='line'>
+        <div className='line'>
           <span></span>
         </div>
 

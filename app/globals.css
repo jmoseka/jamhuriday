@@ -41,3 +41,14 @@ section {
 .line span {
   @apply block w-full h-[0.08px] bg-[#333333];
 }
+
+/* Precolonial section style*/
+.pre-cardline {
+
+}
+
+.pre-cardline span {
+  @apply block w-full h-[0.08px] bg-[#333333];
+}
+
+

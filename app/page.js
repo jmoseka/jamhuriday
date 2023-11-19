@@ -1,5 +1,6 @@
 import IntroText from '@/components/IntroText'
 import PreCard from '@/components/PreCard'
+import PresentCard from '@/components/PresentCard';
 import ResistantCard from '@/components/ResistantCard'
 import Image from 'next/image'
 
@@ -185,11 +186,25 @@ export default function Home() {
           desc="Since Jamhuri Day on December 12, 1964, when Kenya became a republic, there have been several indicators and events that demonstrate the country's status as a self-governing and independent nation. Some of these include:"
         />
 
-        <div>
+        <div className='pt-12 flex flex-col gap-10'>
+
+          <PresentCard
+            title='The Constitution'
+            desc='Kenya has had its own constitution since achieving independence. The countrys constitution outlines the framework for government, the separation of powers, and the rights and responsibilities of its citizens.
+          '
+
+          />
+          <PresentCard
+            title='The Constitution'
+            desc='Kenya has had its own constitution since achieving independence. The countrys constitution outlines the framework for government, the separation of powers, and the rights and responsibilities of its citizens.
+          '
+          />
+
+
 
         </div>
 
-        
+
       </section>
 
     </main>

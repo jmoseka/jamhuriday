@@ -200,12 +200,14 @@ export default function Home() {
           '
           />
 
-
-
         </div>
 
 
       </section>
+
+      <footer className='border'>
+
+      </footer>
 
     </main>
   )

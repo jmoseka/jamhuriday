@@ -184,6 +184,12 @@ export default function Home() {
           subtitle="A sorveign country"
           desc="Since Jamhuri Day on December 12, 1964, when Kenya became a republic, there have been several indicators and events that demonstrate the country's status as a self-governing and independent nation. Some of these include:"
         />
+
+        <div>
+
+        </div>
+
+        
       </section>
 
     </main>

@@ -60,3 +60,9 @@ section {
 .resistant-line {
   @apply block w-auto h-[2px] bg-[#333333];
 }
+
+/* Lancaster meeting */
+
+figcaption {
+  @apply text-[0.7rem];
+}

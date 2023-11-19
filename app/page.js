@@ -49,7 +49,7 @@ export default function Home() {
             <div className='pre-cardline'>
               <span className=''></span>
             </div>
-            
+
             <PreCard
               title='Religion and Spirtuality'
               desc='Indigenous belief systems and spiritual practices were an integral part of African traditional societies. Evidence of sacred sites, rituals, and religious artifacts demonstrates their spiritual traditions.'
@@ -58,13 +58,15 @@ export default function Home() {
 
         </div>
 
-       <div className='pt-12  self-end'>
-       <button type='button' className='w-14 h-14 border rounded-full text-white text-sm'>NEXT</button>
-       </div>
+        <div className='pt-12  self-end'>
+          <button type='button' className='w-14 h-14 border rounded-full text-white text-sm'>NEXT</button>
+        </div>
 
       </section>
 
-      {/* section resistant groups */}
+      {/* section resistant groups
+      Detailing information in a gazette structure stsyle
+      */}
 
       <section className=''>
         <div className='line'>
@@ -80,13 +82,18 @@ export default function Home() {
         <div className='flex pt-14'>
           <article>
             <ResistantCard
-            title='Mau Mau Rebellion'
-            desc={mauMauText}
+              title='Mau Mau Rebellion'
+              desc={mauMauText}
             />
           </article>
         </div>
 
       </section>
+
+
+      {/* section Lancaster meeting
+      Detailing agreements towards the path to independence
+      */}
 
       <section className=''>
 
@@ -99,6 +106,23 @@ export default function Home() {
           subtitle="Path To Independence"
           desc="This timeline covers the series of events, negotiations, and political developments that ultimately led to Kenya's independence. It includes key figures like Jomo Kenyatta and the Lancaster House Conference of 1960-1962."
         />
+
+        <div className='flex flex-col gap-3'>
+          <figure>
+            <Image className='border w-full h-40' width={200} height={200} src="" alt="image" />
+            <figcaption>Mr Jomo Kenyatta (left), President of the Kenya African National Union, and Mr Tom Mboya (check suit) are pictured at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
+
+          </figure>
+
+          <figure>
+            <Image className='border w-full h-40' src="" alt="image" />
+            <figcaption>Mr Jomo Kanyatta, President of the Kenya African National Union, speaking at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.
+
+            </figcaption>
+
+          </figure>
+
+        </div>
       </section>
 
       <section className=''>
@@ -112,6 +136,42 @@ export default function Home() {
           subtitle="Jamhuri Day Declaration"
           desc="This timeline celebrates the day the Kenyan flag was raised, and the country's first president, Jomo Kenyatta, took office. These timelines provide a historical context for the significance of Jamhuri Day and help Kenyans reflect on the journey toward self-governance and the birth of their republic."
         />
+
+        <div className='pt-8'>
+
+          <div className='gallery grid grid-cols-3 border '>
+
+
+            <div className='col-span-3'>
+              <figure>
+                <Image className='border w-full h-40' width={200} height={200} src="" alt="image" />
+                <figcaption>
+                  (Original Caption) 6/1/1963-Nairobi, Kenya- Waving his wisk the newly-elected Premier of Kenya, Jomo Kenyatta, (R, foreground), greeted throngs of cheering citizens as he rode through the streets of Nairobi. Accompanying Kenyatta are Tom Mboya, (L), Minister of Justice and Constitutional Affairs; A. Oginga Odinga, Minister for Home Affairs; and James S. Gichuru, Minister for Finance. The motorcade was part of the National Holiday celebrations which marked the start of internal self-government for the African nation.
+                </figcaption>
+              </figure>
+            </div>
+
+
+            <div className='h-20 w-full border'>
+
+            </div>
+
+            <div className='h-20 w-full border'>
+
+            </div>
+
+            <div className='h-20 w-full border'>
+
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+
+
       </section>
 
       <section className=''>

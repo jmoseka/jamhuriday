@@ -139,7 +139,7 @@ export default function Home() {
 
         <div className='pt-8'>
 
-          <div className='gallery grid grid-cols-3 border '>
+          <div className='gallery grid grid-cols-3 border gap-y-8'>
 
 
             <div className='col-span-3'>

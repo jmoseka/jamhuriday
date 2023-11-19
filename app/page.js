@@ -205,8 +205,29 @@ export default function Home() {
 
       </section>
 
-      <footer className='border'>
+      <footer className='border pt-10'>
 
+        <div className='flex'>
+
+
+          <div className=''>
+            <h2>Useful Links</h2>
+            <ul>
+              <li>Home</li>
+              <li>Pre-colonial era</li>
+              <li>Colonial rule and resistance groups</li>
+              <li>Path to Independence</li>
+              <li>The Jamhuri Day</li>
+              <li>Present day</li>
+            </ul>
+
+          </div>
+
+          <div className=''>
+            <h2>Social media</h2>
+          </div>
+
+        </div>
       </footer>
 
     </main>

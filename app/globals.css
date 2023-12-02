@@ -46,7 +46,7 @@ section {
 
 /* Precolonial section style*/
 .section-body-content {
-  @apply pt-20;
+  @apply pt-20  md:w-[30rem];
 }
 
 .pre-cardline {

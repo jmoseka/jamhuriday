@@ -13,7 +13,7 @@ export default function Home() {
   The Mau Mau uprising ultimately played a crucial role in Kenya's struggle for independence. It brought international attention to the injustices of colonialism and contributed significantly to the push for Kenya's eventual independence, which was achieved in 1963.`;
   return (
     <main className="flex min-h-screen w-full 
-    flex-col items-center justify-between px-3 md:px-5 font-istok">
+    flex-col items-center justify-between px-3 md:px-20 font-istok">
 
       <section className="hero-section h-[80vh]  w-full">
         <div className='hero w-full pt-32
@@ -27,31 +27,33 @@ export default function Home() {
         <div className='line'>
           <span className=''></span>
         </div>
-          <IntroText 
-            title="1000BC - 19TH CE"
-            subtitle="Pre-colonial era"
-            desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
-          />
+        <IntroText
+          title="1000BC - 19TH CE"
+          subtitle="Pre-colonial era"
+          desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
+        />
 
-        <div className='section-body'>
+        <div className='section-body  md:flex md:flex-col'>
 
-          <article className='section-body-content'>
-            <div className='pre-cardline'>
+          <article className='md:self-end section-body-content '>
+            <div className='pre-cardline md:hidden'>
               <span className=''></span>
             </div>
 
             <PreCard
+              align='md:text-end'
               title='Social Structures'
               desc='Several indigenous societies and kingdoms flourished, such as the Kikuyu, Kamba, Luo, Maasai, and many others. They had had well-defined social structures. Evidence of chiefs, elders, and councils for decision-making and conflict resolution can be found in historical accounts and oral traditions.'
             />
           </article>
 
-          <article className='section-body-content'>
-            <div className='pre-cardline'>
+          <article className='md:-translate-y-12 section-body-content'>
+            <div className='pre-cardline md:hidden'>
               <span className=''></span>
             </div>
 
             <PreCard
+
               title='Religion and Spirtuality'
               desc='Indigenous belief systems and spiritual practices were an integral part of African traditional societies. Evidence of sacred sites, rituals, and religious artifacts demonstrates their spiritual traditions.'
             />

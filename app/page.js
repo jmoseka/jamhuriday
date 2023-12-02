@@ -13,13 +13,13 @@ export default function Home() {
   The Mau Mau uprising ultimately played a crucial role in Kenya's struggle for independence. It brought international attention to the injustices of colonialism and contributed significantly to the push for Kenya's eventual independence, which was achieved in 1963.`;
   return (
     <main className="flex min-h-screen w-full 
-    flex-col items-center justify-between px-3 font-istok">
+    flex-col items-center justify-between px-3 md:px-5 font-istok">
 
-      <section className="hero-section h-[90vh] w-full  border border-purple-900 ">
-        <div className='hero w-full border pt-48
-         border-red-700 text-center'>
-          <h1 className='uppercase text-2xl font-ibara'>In the shadows of freedom</h1>
-          <p className='text-sm'>Where the spirit of independence soars.</p>
+      <section className="hero-section h-[80vh]  w-full">
+        <div className='hero w-full pt-32
+          text-center'>
+          <h1 className='uppercase text-2xl font-ibara md:text-5xl'>In the shadows of freedom</h1>
+          <p className='text-sm text-gray-500 md:text-xl'>Where the spirit of independence soars.</p>
         </div>
       </section>
 
@@ -27,11 +27,11 @@ export default function Home() {
         <div className='line'>
           <span className=''></span>
         </div>
-        <IntroText
-          title="1000BC - 19TH CE"
-          subtitle="Pre-colonial era"
-          desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
-        />
+          <IntroText 
+            title="1000BC - 19TH CE"
+            subtitle="Pre-colonial era"
+            desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
+          />
 
         <div className='section-body'>
 
@@ -207,7 +207,7 @@ export default function Home() {
 
       <footer className='w-full pt-[6rem]'>
         <div className='line'>
-        <span className=''></span>
+          <span className=''></span>
         </div>
         <div className='flex '>
 

@@ -205,12 +205,14 @@ export default function Home() {
 
       </section>
 
-      <footer className='border pt-10'>
+      <footer className='w-full pt-[6rem]'>
+        <div className='line'>
+        <span className=''></span>
+        </div>
+        <div className='flex '>
 
-        <div className='flex'>
 
-
-          <div className=''>
+          <div className='text-white'>
             <h2>Useful Links</h2>
             <ul>
               <li>Home</li>

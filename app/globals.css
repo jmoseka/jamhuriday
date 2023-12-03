@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -28,6 +26,43 @@
     rgb(var(--background-start-rgb));
 } */
 
- body {
+body {
   background: black;
+}
+
+
+
+section {
+  @apply text-[#e6e6e6] flex flex-col;
+}
+
+.line {
+  @apply px-1 py-32 w-full;
+}
+
+.line span {
+  @apply block w-full h-[0.08px] bg-[#333333];
+}
+
+/* Precolonial section style*/
+
+
+.pre-cardline {
+  @apply pb-7 w-full;
+}
+
+.pre-cardline span {
+  @apply block w-14 h-[2px] bg-[#333333];
+}
+
+
+/* Resistant groups style*/
+.resistant-line {
+  @apply block w-auto h-[2px] bg-[#333333];
+}
+
+/* Lancaster meeting */
+
+figcaption {
+  @apply text-[0.7rem];
 }

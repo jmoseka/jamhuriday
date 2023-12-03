@@ -75,9 +75,20 @@ export default function Home() {
           desc="This timeline highlights the period of British colonial rule, which lasted from the late 19th century until Kenya's independence in 1963. It includes the struggles and resistance against colonial oppression and exploitation."
         />
 
-        <div className='flex pt-14'>
+
+        <div className='flex flex-col gap-10 md:gap-20 pt-14'>
           <article>
             <ResistantCard
+              float='left'
+              title='Mau Mau Rebellion'
+              desc={mauMauText}
+            />
+          </article>
+
+          <article>
+            <ResistantCard
+            align='right'
+              float='right'
               title='Mau Mau Rebellion'
               desc={mauMauText}
             />

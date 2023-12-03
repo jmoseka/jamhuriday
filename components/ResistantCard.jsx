@@ -1,18 +1,19 @@
 import Image from "next/image";
 
-export default function ResistantCard({ title, desc, img }) {
+export default function ResistantCard({ title, desc, img, float, align }) {
   return (
-    <div className="">
-      <div className="flex items-center">
-        <h2 className="text-xl"> {title}</h2>
-        <span className="resistant-line"></span>
+    <div className="flex flex-col">
+      <div className="pb-2">
+        <h2 className={`text-xl md:text-2xl ${align === 'right' ? 'md:text-right' : 'text-left'}`}> {title}</h2>
       </div>
 
       <div className="">
-        <div className="border-2 mr-3 mb-[0.11rem] float-left border-white">
-          <Image width={200} height={100} src="" alt="image" />
+        <div
+          className={`border w-[60%]  h-[12rem] mr-3 mb-[0.11rem] float-left ${float === 'right' ? 'md:float-right' : 'float-left'} border-white`}
+        >
+          <Image src="" alt="image" />
         </div>
-        <p dangerouslySetInnerHTML={{ __html: desc }}  className=" pb-3"/>
+        <p dangerouslySetInnerHTML={{ __html: desc }} className=" pb-3" />
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ export default function Home() {
   The Mau Mau uprising ultimately played a crucial role in Kenya's struggle for independence. It brought international attention to the injustices of colonialism and contributed significantly to the push for Kenya's eventual independence, which was achieved in 1963.`;
   return (
     <main className="flex min-h-screen w-full 
-    flex-col items-center justify-between px-3 md:px-8 font-istok">
+    flex-col items-center justify-between px-3 md:px-20 font-istok">
 
       <section className="hero-section h-[80vh]  w-full">
         <div className='hero w-full pt-32
@@ -87,7 +87,7 @@ export default function Home() {
 
           <article>
             <ResistantCard
-            align='right'
+              align='right'
               float='right'
               title='Mau Mau Rebellion'
               desc={mauMauText}
@@ -114,15 +114,20 @@ export default function Home() {
           desc="This timeline covers the series of events, negotiations, and political developments that ultimately led to Kenya's independence. It includes key figures like Jomo Kenyatta and the Lancaster House Conference of 1960-1962."
         />
 
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-3 md:flex-row pt-20'>
           <figure>
-            <Image className='border w-full h-40' width={200} height={200} src="" alt="image" />
+            <div className='h-[15rem] border'>
+              <Image src="" alt="image" />
+            </div>
             <figcaption>Mr Jomo Kenyatta (left), President of the Kenya African National Union, and Mr Tom Mboya (check suit) are pictured at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
 
           </figure>
 
           <figure>
-            <Image className='border w-full h-40' src="" alt="image" />
+            <div className='h-[15rem] border'>
+              <Image src="" alt="image" />
+            </div>
+
             <figcaption>Mr Jomo Kanyatta, President of the Kenya African National Union, speaking at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.
 
             </figcaption>
@@ -151,23 +156,23 @@ export default function Home() {
 
             <div className='col-span-3'>
               <figure>
-                <Image className='border w-full h-40' width={200} height={200} src="" alt="image" />
+                <Image className=' w-full h-[14rem] md:h-[22rem]' width={200} src="" alt="image" />
                 <figcaption>
-                  (Original Caption) 6/1/1963-Nairobi, Kenya- Waving his wisk the newly-elected Premier of Kenya, Jomo Kenyatta, (R, foreground), greeted throngs of cheering citizens as he rode through the streets of Nairobi. Accompanying Kenyatta are Tom Mboya, (L), Minister of Justice and Constitutional Affairs; A. Oginga Odinga, Minister for Home Affairs; and James S. Gichuru, Minister for Finance. The motorcade was part of the National Holiday celebrations which marked the start of internal self-government for the African nation.
+                  (Original Caption) 6/1/1963-Nairobi, Kenya- Waving his wisk the newly-elected Premier of Kenya, Jomo Kenyatta, (R, foreground), greeted throngs of cheering citizens as he rode through the streets of Nairobi. Accompanying Kenyatta are Tom Mboya, (L), Minister of Justice and Constitutional Affairs; A. Oginga Odinga, Minister for Home Affairs; and James S. Gichuru, Minister for Finance. 
                 </figcaption>
               </figure>
             </div>
 
 
-            <div className='h-20 w-full border'>
+            <div className='h-36 w-full border'>
 
             </div>
 
-            <div className='h-20 w-full border'>
+            <div className='h-36 w-full border'>
 
             </div>
 
-            <div className='h-20 w-full border'>
+            <div className='h-36 w-full border'>
 
             </div>
 
@@ -192,7 +197,7 @@ export default function Home() {
           desc="Since Jamhuri Day on December 12, 1964, when Kenya became a republic, there have been several indicators and events that demonstrate the country's status as a self-governing and independent nation. Some of these include:"
         />
 
-        <div className='pt-12 flex flex-col gap-10'>
+        <div className='pt-16 flex flex-col gap-10 md:gap-16'>
 
           <PresentCard
             title='The Constitution'
@@ -201,6 +206,7 @@ export default function Home() {
 
           />
           <PresentCard
+          order={2}
             title='The Constitution'
             desc='Kenya has had its own constitution since achieving independence. The countrys constitution outlines the framework for government, the separation of powers, and the rights and responsibilities of its citizens.
           '
@@ -219,7 +225,7 @@ export default function Home() {
 
 
           <div className='text-white'>
-            <h2>Useful Links</h2>
+            <h2 className='text-xl'>Useful Links</h2>
             <ul>
               <li>Home</li>
               <li>Pre-colonial era</li>

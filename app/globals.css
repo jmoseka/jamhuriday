@@ -33,11 +33,11 @@ body {
 
 
 section {
-  @apply text-[#e6e6e6] flex flex-col pt-24;
+  @apply text-[#e6e6e6] flex flex-col;
 }
 
 .line {
-  @apply px-1 pb-12 w-full;
+  @apply px-1 py-32 w-full;
 }
 
 .line span {
@@ -45,9 +45,7 @@ section {
 }
 
 /* Precolonial section style*/
-.section-body-content {
-  @apply pt-20  md:w-[30rem];
-}
+
 
 .pre-cardline {
   @apply pb-7 w-full;

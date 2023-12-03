@@ -15,8 +15,8 @@ export default function Home() {
     <main className="flex min-h-screen w-full 
     flex-col items-center justify-between px-3 md:px-20 font-istok">
 
-      <section className="hero-section h-[80vh]  w-full">
-        <div className='hero w-full pt-32
+      <section className="hero-section h-[75vh]  w-full">
+        <div className='hero w-full pt-52
           text-center'>
           <h1 className='uppercase text-2xl font-ibara md:text-5xl'>In the shadows of freedom</h1>
           <p className='text-sm text-gray-500 md:text-xl'>Where the spirit of independence soars.</p>

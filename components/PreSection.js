@@ -32,7 +32,7 @@ function PreSection() {
                 <article className='md:self-end section-body-content '>
 
                     <PreCard
-                    order = {i % 2 === 0 ? '2' : ''}
+                        order={i % 2 === 0 ? '2' : ''}
                         title={`Social Structures ${i}`}
                         desc='Several indigenous societies and kingdoms flourished, such as the Kikuyu, Kamba, Luo, Maasai, and many others. They had had well-defined social structures. Evidence of chiefs, elders, and councils for decision-making and conflict resolution can be found in historical accounts and oral traditions.'
                     />
@@ -44,9 +44,11 @@ function PreSection() {
 
     return (
         <>
-            {renderCard()}
+            <div className="font-nunito section-body flex flex-col gap-20 md:gap-20 rounded-2xl ">
+                {renderCard()}
+            </div>
 
-            <div className={`pt-12 flex border  ${currentPage === 1 ? 'justify-end' : 'justify-start'}`}>
+            <div className={`pt-12 flex  justify-center`}>
 
                 {
                     currentPage === 1 ?

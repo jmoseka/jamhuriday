@@ -6,7 +6,7 @@ export default function PreCard({ title, desc, img, align, order }) {
       <div
         className={` text-start md:w-[50%] md:text-center md:order-${order}`}
       >
-        <h2 className={`textTitle text-2xl md:text-3xl `}> {title}</h2>
+        <h2 className={`textTitle text-2xl md:text-3xl font-bold text-cardText`}> {title}</h2>
       </div>
 
       <div className={`flex flex-col gap-5 md:w-1/2`}>

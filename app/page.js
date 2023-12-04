@@ -1,6 +1,5 @@
 "use client"
 import IntroText from '@/components/IntroText'
-import PreCard from '@/components/PreCard'
 import PreSection from '@/components/PreSection';
 import PresentCard from '@/components/PresentCard';
 import ResistantCard from '@/components/ResistantCard'
@@ -35,14 +34,14 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen w-full 
+    <main className="flex min-h-screen w-full bg-bgcolor
     flex-col items-center justify-between px-3 md:px-20 font-istok">
 
       <section className="hero-section h-[75vh]  w-full">
         <div className='hero w-full pt-52
           text-center'>
-          <h1 className='uppercase text-2xl font-ibara md:text-5xl'>In the shadows of freedom</h1>
-          <p className='text-sm text-gray-500 md:text-xl'>Where the spirit of independence soars.</p>
+          <h1 className='uppercase text-2xl font-nunito md:text-5xl'>In the shadows of freedom</h1>
+          <p className='text-subtitle text-sm md:text-xl'>Where the spirit of independence soars.</p>
         </div>
       </section>
 
@@ -56,18 +55,9 @@ export default function Home() {
           desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
         />
 
-        <div className='pt-20 section-body flex flex-col gap-20 md:gap-20  '>
+        <div className=''>
 
           <PreSection />
-
-          {/* <article className='w-full section-body-content'>
-
-            <PreCard
-              order='2'
-              title='Religion and Spirtuality'
-              desc='Indigenous belief systems and spiritual practices were an integral part of African traditional societies. Evidence of sacred sites, rituals, and religious artifacts demonstrates their spiritual traditions.'
-            />
-          </article> */}
 
         </div>
 
@@ -166,24 +156,24 @@ export default function Home() {
 
         <div className='pt-8'>
 
-          <div className='gallery grid grid-cols-3 border gap-y-8'>
+          <div className='w-full gallery grid grid-cols-3 border gap-y-8'>
 
 
             <div className='col-span-3'>
               <figure>
                 <p>paragraph {selectedImage.id}</p>
-                <Image className=' w-full h-[14rem] md:h-[22rem]' width={200} src={selectedImage.src} alt="image" />
+                <Image className=' w-full h-[12rem] md:h-[18rem]' width={200} src={selectedImage.src} alt="image" />
                 <figcaption>
                   (Original Caption) 6/1/1963-Nairobi, Kenya- Waving his wisk the newly-elected Premier of Kenya, Jomo Kenyatta, (R, foreground), greeted throngs of cheering citizens as he rode through the streets of Nairobi. Accompanying Kenyatta are Tom Mboya, (L), Minister of Justice and Constitutional Affairs; A. Oginga Odinga, Minister for Home Affairs; and James S. Gichuru, Minister for Finance.
                 </figcaption>
               </figure>
             </div>
 
-            <div className="image-list flex">
+            <div className=" flex col-span-3">
               {smallimages.map((image) => (
-                <button key={image.id} className="small-image h-36 w-full border" onClick={() => handleClick(image)}>
+                <button key={image.id} className="small-image h-36 flex-1" onClick={() => handleClick(image)}>
                   <p>Number {image.id}</p>
-                  <Image src={image.src} alt={`Image ${image.id}`} width={300} height={300} />
+                  <Image src={image.src} alt={`Image ${image.id}`} />
                 </button>
               ))}
             </div>
@@ -236,7 +226,7 @@ export default function Home() {
         <div className='flex '>
 
 
-          <div className='text-white'>
+          <div className='text-textColor'>
             <h2 className='text-xl'>Useful Links</h2>
             <ul>
               <li>Home</li>

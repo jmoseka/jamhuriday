@@ -1,10 +1,34 @@
 import { useState } from "react";
 
 import PreCard from '@/components/PreCard'
+import Grazing from '../app/img/maasaiherd.png'
 
 function PreSection() {
 
     const [currentPage, setCurrentPage] = useState(1);
+
+    const items = [{
+        title: 'Diverse ethnic group',
+        desc: 'Kenya was home to numerous ethnic groups such as the Kikuyu, Luo, Luhya, Kalenjin, Maasai, and others, each with its own language, customs, and social organization.',
+        img: ''
+    },
+    {
+        title: 'Political Organization',
+        desc: 'Political systems varied, ranging from centralized monarchies to decentralized systems led by councils of elders. Some societies had chiefs or leaders who held authority, often based on lineage or prowess in war.',
+        img: ''
+    },
+    {
+        title: 'Economic Activities',
+        desc: 'Agriculture was a crucial part of precolonial Kenyan society. People cultivated crops like maize, millet, sorghum, and yams. Livestock, including cattle, goats, and sheep, were also reared for food and as a symbol of wealth and status..',
+        img: ''
+    },
+    {
+        title: 'Religious Beliefs',
+        desc: 'Traditional African religions were prevalent, characterized by beliefs in spirits, ancestor worship, and the presence of supernatural forces in nature. Religious practices varied among different ethnic groups.',
+        img: ''
+    },
+
+]
 
     const cardsPerPage = 2;
     const totalCards = 4;
@@ -33,8 +57,9 @@ function PreSection() {
 
                     <PreCard
                         order={i % 2 === 0 ? '2' : ''}
-                        title={`Social Structures ${i}`}
-                        desc='Several indigenous societies and kingdoms flourished, such as the Kikuyu, Kamba, Luo, Maasai, and many others. They had had well-defined social structures. Evidence of chiefs, elders, and councils for decision-making and conflict resolution can be found in historical accounts and oral traditions.'
+                        title={items[i].img}
+                        desc={items[i].desc}
+                        img={items[i].img}
                     />
                 </article>
             );

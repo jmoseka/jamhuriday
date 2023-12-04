@@ -6,14 +6,19 @@ export default function PreCard({ title, desc, img, align, order }) {
       <div
         className={` text-start md:w-[50%] md:text-center md:order-${order}`}
       >
-        <h2 className={`textTitle text-2xl md:text-3xl font-bold text-cardText`}> {title}</h2>
+        <h2
+          className={`textTitle text-2xl md:text-3xl font-bold text-cardText`}
+        >
+          {" "}
+          {title}
+        </h2>
       </div>
 
       <div className={`flex flex-col gap-5 md:w-1/2`}>
         <p className={``}>{desc}</p>
 
-        <div className="border md:mx-auto border-green-700 md:w-44">
-          <Image width={50} height={200} src="" alt="image" />
+        <div className="border md:mx-auto border-green-700 md:w-44 h-44">
+          <Image  fill src={img} alt={img}/>
         </div>
       </div>
     </div>

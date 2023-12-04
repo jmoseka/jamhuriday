@@ -30,8 +30,6 @@ body {
   background: black;
 }
 
-
-
 section {
   @apply text-[#e6e6e6] flex flex-col;
 }
@@ -46,7 +44,6 @@ section {
 
 /* Precolonial section style*/
 
-
 .pre-cardline {
   @apply pb-7 w-full;
 }
@@ -54,7 +51,6 @@ section {
 .pre-cardline span {
   @apply block w-14 h-[2px] bg-[#333333];
 }
-
 
 /* Resistant groups style*/
 .resistant-line {
@@ -66,3 +62,8 @@ section {
 figcaption {
   @apply text-[0.7rem];
 }
+
+.textTitle {
+  @apply relative;
+}
+

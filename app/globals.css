@@ -67,3 +67,22 @@ figcaption {
   @apply relative;
 }
 
+
+.paragraph {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 12px;
+}
+
+.word {
+  position: relative;
+  margin-right: 7px;
+  margin-top: 12px;
+  
+}
+
+.shadow {
+  position: absolute;
+  opacity: 0.1;
+
+}

@@ -28,7 +28,7 @@ function PreSection() {
         img: ''
     },
 
-]
+    ]
 
     const cardsPerPage = 2;
     const totalCards = 4;
@@ -57,7 +57,7 @@ function PreSection() {
 
                     <PreCard
                         order={i % 2 === 0 ? '2' : ''}
-                        title={items[i].img}
+                        title={items[i].title}
                         desc={items[i].desc}
                         img={items[i].img}
                     />

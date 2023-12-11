@@ -8,9 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        istok: ['var(--font--istok)', 'sans-serif'],
-        ibara: ['var(--font--ibara)', 'sans-serif'],
-        nunito: ['var(--font--nunito)', 'sans-serif']
+        urban: ['var(--font--urban)', 'sans-serif'],
+        playfair: ['var(--font--playfair)', 'sans-serif']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

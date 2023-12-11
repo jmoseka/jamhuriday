@@ -11,10 +11,6 @@ export default function PreCard({ title, desc, img, align, order }) {
     offset: ["start 0.9", "start 0.35"],
   });
 
-  // useEffect(() => {
-  //   scrollYProgress.on('change', e => console.log(e))
-  // }, [])
-
   return (
     <div className="w-full flex flex-col md:flex-row gap-2 md:gap-2 md:items-center">
       <div
@@ -28,14 +24,14 @@ export default function PreCard({ title, desc, img, align, order }) {
         </h2>
       </div>
 
-      <div className={`flex flex-col gap-5 md:w-1/2`}>
+      <div className={`flex flex-col gap-5 md:gap-0 md:w-1/2`}>
         <motion.p ref={element} style={{ opacity: scrollYProgress }}>
           {desc}
      
         </motion.p>
 
-        <div className="border md:mx-auto border-red-700 md:w-44 h-44">
-          <Image src={img} alt={img} />
+        <div className="relative md:mx-auto md:w-full h-60">
+          <Image src={img} alt={img} layout="fill" objectFit="cover"/>
         </div>
       </div>
     </div>

@@ -10,22 +10,22 @@ function PreSection() {
     const items = [{
         title: 'Diverse ethnic group',
         desc: 'Kenya was home to numerous ethnic groups such as the Kikuyu, Luo, Luhya, Kalenjin, Maasai, and others, each with its own language, customs, and social organization.',
-        img: ''
+        img: Grazing
     },
     {
         title: 'Political Organization',
         desc: 'Political systems varied, ranging from centralized monarchies to decentralized systems led by councils of elders. Some societies had chiefs or leaders who held authority, often based on lineage or prowess in war.',
-        img: ''
+        img: Grazing
     },
     {
         title: 'Economic Activities',
         desc: 'Agriculture was a crucial part of precolonial Kenyan society. People cultivated crops like maize, millet, sorghum, and yams. Livestock, including cattle, goats, and sheep, were also reared for food and as a symbol of wealth and status..',
-        img: ''
+        img: Grazing
     },
     {
         title: 'Religious Beliefs',
         desc: 'Traditional African religions were prevalent, characterized by beliefs in spirits, ancestor worship, and the presence of supernatural forces in nature. Religious practices varied among different ethnic groups.',
-        img: ''
+        img: Grazing
     },
 
     ]
@@ -53,7 +53,7 @@ function PreSection() {
         const cardsToShow = [];
         for (let i = startIndex; i < endIndex; i++) {
             cardsToShow.push(
-                <article className='md:self-end section-body-content '>
+                <article className='md:self-end '>
 
                     <PreCard
                         order={i % 2 === 0 ? '2' : ''}
@@ -69,7 +69,7 @@ function PreSection() {
 
     return (
         <>
-            <div className="font-nunito section-body flex flex-col gap-20 md:gap-20 rounded-2xl ">
+            <div className="section-body flex flex-col gap-20 md:gap-20 rounded-2xl ">
                 {renderCard()}
             </div>
 

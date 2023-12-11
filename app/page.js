@@ -35,12 +35,12 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen w-full bg-bgcolor
-    flex-col items-center justify-between px-3 md:px-20 font-istok">
+    flex-col items-center justify-between px-4 md:px-20 font-urban">
 
-      <section className="hero-section h-[75vh]  w-full">
+      <section className="hero-section h-[100vh]  w-full">
         <div className='hero w-full pt-52
           text-center'>
-          <h1 className='uppercase text-2xl font-nunito md:text-5xl'>In the shadows of freedom</h1>
+          <h1 className='uppercase text-2xl md:text-7xl'>In the shadows of freedom</h1>
           <p className='text-subtitle text-sm md:text-xl'>Where the spirit of independence soars.</p>
         </div>
       </section>
@@ -50,12 +50,12 @@ export default function Home() {
           <span className=''></span>
         </div>
         <IntroText
-          title="1000BC - 19TH CE"
+          title="1000BC - 1900's"
           subtitle="Pre-colonial era"
           desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
         />
 
-        <div className=''>
+        <div className='sub-section'>
 
           <PreSection />
 

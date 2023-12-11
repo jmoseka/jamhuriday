@@ -10,7 +10,6 @@ export default function PreCard({ title, desc, img, align, order }) {
     // at 0.35 at 35% opacity is 1 default: start start
     offset: ["start 0.9", "start 0.35"],
   });
-  const words = desc.split(" ");
 
   // useEffect(() => {
   //   scrollYProgress.on('change', e => console.log(e))
@@ -30,17 +29,10 @@ export default function PreCard({ title, desc, img, align, order }) {
       </div>
 
       <div className={`flex flex-col gap-5 md:w-1/2`}>
-        <p ref={element} className="paragraph">
-          {words.map((word, index) => {
-            const start = index / words.length;
-            const end = start + 1 / words.length;
-            return (
-              <Word key={index} range={[start, end]} progress={scrollYProgress}>
-                {word}{" "}
-              </Word>
-            );
-          })}
-        </p>
+        <motion.p ref={element} style={{ opacity: scrollYProgress }}>
+          {desc}
+     
+        </motion.p>
 
         <div className="border md:mx-auto border-red-700 md:w-44 h-44">
           <Image src={img} alt={img} />
@@ -55,9 +47,7 @@ const Word = ({ children, range, progress }) => {
   return (
     <span className="word">
       <span className="shadow">{children}</span>
-      <motion.span style={{ opacity }}>
-        {children}
-      </motion.span>
+      <motion.span style={{ opacity }}>{children}</motion.span>
     </span>
   );
 };

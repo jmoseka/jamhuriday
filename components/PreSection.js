@@ -53,7 +53,7 @@ function PreSection() {
         const cardsToShow = [];
         for (let i = startIndex; i < endIndex; i++) {
             cardsToShow.push(
-                <article className='md:self-end '>
+                <article className={` ${i % 2 !== 0 ? 'pt-40 w-[40%]' : 'w-[50%] '}`}>
 
                     <PreCard
                         order={i % 2 === 0 ? '2' : ''}
@@ -69,7 +69,7 @@ function PreSection() {
 
     return (
         <>
-            <div className="section-body flex flex-col gap-20 md:gap-20 rounded-2xl ">
+            <div className="section-body flex justify-between gap-10 px-4 md:px-20">
                 {renderCard()}
             </div>
 

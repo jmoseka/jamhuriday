@@ -35,13 +35,13 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen w-full bg-bgcolor
-    flex-col items-center justify-between px-4 md:px-20 font-urban">
+    flex-col items-center justify-between font-urban">
 
       <section className="hero-section h-[100vh]  w-full">
         <div className='hero w-full pt-52
-          text-center'>
-          <h1 className='uppercase text-2xl md:text-7xl'>In the shadows of freedom</h1>
-          <p className='text-subtitle text-sm md:text-xl'>Where the spirit of independence soars.</p>
+          text-center px-4 md:px-20'>
+          <h1 className='uppercase text-4xl md:text-5xl lg:text-7xl'>In the shadows of freedom</h1>
+          <p className='text-subtitle text-lg md:text-2xl'>Where the spirit of independence soars.</p>
         </div>
       </section>
 

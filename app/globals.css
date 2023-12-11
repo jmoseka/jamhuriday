@@ -97,3 +97,7 @@ figcaption {
   position: absolute;
   opacity: 0.1;
 }
+
+.textTitle {
+  @apply text-2xl md:text-3xl font-bold text-cardText;
+}

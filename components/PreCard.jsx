@@ -12,28 +12,29 @@ export default function PreCard({ title, desc, img, align, order }) {
   });
 
   return (
-    <div className="w-full flex flex-col md:flex-row gap-2 md:gap-2 md:items-center">
-      <div
-        className={` text-start md:w-[50%] md:text-center md:order-${order}`}
-      >
+    <div className="flex flex-col gap-5">
+
         <h2
-          className={`textTitle text-2xl md:text-3xl font-bold text-cardText`}
+          className={`textTitle `}
         >
           {" "}
           {title}
         </h2>
-      </div>
+     
 
-      <div className={`flex flex-col gap-5 md:gap-0 md:w-1/2`}>
+      <div>
         <motion.p ref={element} style={{ opacity: scrollYProgress }}>
           {desc}
      
         </motion.p>
 
-        <div className="relative md:mx-auto md:w-full h-60">
+        <div className="mt-3 relative h-80">
           <Image src={img} alt={img} layout="fill" objectFit="cover"/>
         </div>
       </div>
+
+
+
     </div>
   );
 }

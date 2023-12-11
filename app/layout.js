@@ -1,4 +1,4 @@
-import { Inter, Istok_Web, Ibarra_Real_Nova, Nunito, Urbanist, Playfair_Display } from 'next/font/google'
+import { Urbanist, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
 const urban = Urbanist({

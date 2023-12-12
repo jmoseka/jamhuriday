@@ -104,8 +104,8 @@ export default function Home() {
           <Image src={maumau} alt='mau mau troops' layout="fill" objectFit={windowWidth > 892 ? 'cover' : 'contain'} />
         </div>
 
-        <div>
-          <p className='uppercase '>MAU MAU REBELLION</p>
+        <div className='px-8 sm:px-[8vw] h-[100vh] w-[100%] flex items-center justify-center '>
+          <p className='uppercase text-4xl md:text-5xl xl:text-[5rem] 2xl:text-[6vw] text-center font-bold tracking-wider'>MAU MAU REBELLION</p>
         </div>
 
       </section>

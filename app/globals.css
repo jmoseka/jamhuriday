@@ -101,3 +101,7 @@ figcaption {
 .textTitle {
   @apply text-2xl md:text-3xl font-bold text-cardText;
 }
+
+.margins {
+  @apply px-4 md:px-20;
+}

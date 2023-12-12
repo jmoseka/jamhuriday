@@ -69,7 +69,7 @@ function PreSection() {
 
     return (
         <>
-            <div className="section-body flex justify-between gap-10 px-4 md:px-20">
+            <div className="section-body flex justify-between gap-10 margins">
                 {renderCard()}
             </div>
 

@@ -9,7 +9,7 @@ export default function ResistantCard({ title, desc, img, float, align }) {
 
       <div className="">
         <div
-          className={`border w-[60%]  h-[18rem] mr-3 mb-[0.11rem] border-white`}
+          className={`border w-[60%]  h-[20rem] mr-3 mb-[0.11rem] border-white`}
         >
           <Image src="" alt="image" />
         </div>

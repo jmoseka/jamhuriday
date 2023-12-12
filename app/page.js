@@ -39,7 +39,7 @@ export default function Home() {
 
       <section className="hero-section h-[100vh]  w-full">
         <div className='hero w-full pt-52
-          text-center px-4 md:px-20'>
+          text-center margins'>
           <h1 className='uppercase text-4xl md:text-5xl lg:text-7xl'>In the shadows of freedom</h1>
           <p className='text-subtitle text-lg md:text-2xl'>Where the spirit of independence soars.</p>
         </div>
@@ -81,7 +81,7 @@ export default function Home() {
         />
 
 
-        <div className='flex flex-col gap-10 md:gap-20 pt-14'>
+        <div className='margins flex flex-col gap-10 md:gap-20 pt-14'>
           <article>
             <ResistantCard
               float='left'

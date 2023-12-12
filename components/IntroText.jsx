@@ -14,7 +14,7 @@ export default function IntroText({ title, subtitle, desc }) {
   const words = title.split(" ");
 
   return (
-    <div className="intro w-full px-4 md:px-20">
+    <div className="intro w-full margins">
       <div className="h-[100%] absolute top-44 flex flex-col gap-10">
         <motion.h2
           ref={element}

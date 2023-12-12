@@ -2,9 +2,9 @@
 import IntroText from '@/components/IntroText'
 import PreSection from '@/components/PreSection';
 import PresentCard from '@/components/PresentCard';
-import ResistantCard from '@/components/ResistantCard'
-import Image from 'next/image'
-import { useState } from 'react';
+import maumau from '../app/img/maumautroop.jpg';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 
 export default function Home() {
@@ -24,6 +24,19 @@ export default function Home() {
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const smallimages = images.slice(1, 4);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleWindowResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowResize);
+    // Clean up the event listener when component unmounts
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   const handleClick = (image) => {
     setSelectedImage(image);
@@ -49,7 +62,7 @@ export default function Home() {
         <span className=''></span>
       </div>
 
-      <section className='px-2 sm:px-[8vw] flex flex-col border'>
+      <section className='px-2 sm:px-[8vw] flex flex-col'>
 
         <IntroText
           title="1000BC - 19TH CE"
@@ -71,35 +84,28 @@ export default function Home() {
       Detailing information in a gazette structure stsyle
       */}
 
-      <section className=''>
-        <div className='line'>
-          <span></span>
+      <div className='line'>
+        <span></span>
+      </div>
+
+      <section>
+
+
+        <div className='px-8 sm:px-[8vw]'>
+          <IntroText
+            title="1900 - 1963"
+            subtitle="Colonial Rule and Resistance Movements"
+            desc="This timeline highlights the period of British colonial rule, which lasted from the late 19th century until Kenya's independence in 1963. It includes the struggles and resistance against colonial oppression and exploitation."
+          />
         </div>
 
-        <IntroText
-          title="1900 - 1963"
-          subtitle="Colonial Rule and Resistance Movements"
-          desc="This timeline highlights the period of British colonial rule, which lasted from the late 19th century until Kenya's independence in 1963. It includes the struggles and resistance against colonial oppression and exploitation."
-        />
 
+        <div className='border relative h-[100vh] w-[100%]'>
+          <Image src={maumau} alt='mau mau troops' layout="fill" objectFit={windowWidth > 892 ? 'cover' : 'contain'} />
+        </div>
 
-        <div className='margins flex flex-col gap-10 md:gap-20 pt-14'>
-          <article>
-            <ResistantCard
-              float='left'
-              title='Mau Mau Rebellion'
-              desc={mauMauText}
-            />
-          </article>
-
-          <article>
-            <ResistantCard
-              align='right'
-              float='right'
-              title='Mau Mau Rebellion'
-              desc={mauMauText}
-            />
-          </article>
+        <div>
+          <p className='uppercase '>MAU MAU REBELLION</p>
         </div>
 
       </section>

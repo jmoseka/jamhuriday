@@ -18,7 +18,7 @@ export default function PreCard({ title, desc, img, align, order }) {
         {title}
       </h2>
 
-      <div className="flex flex-col gap-4 2xl:gap-8" >
+      <div className="flex flex-col gap-4 2xl:gap-8">
         <motion.p
           ref={element}
           style={{ opacity: scrollYProgress }}

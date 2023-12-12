@@ -31,11 +31,25 @@ body {
 }
 
 section {
-  @apply text-[#e6e6e6] flex flex-col;
+  @apply text-[#e6e6e6];
+}
+
+.intro {
+  @apply relative;
+  height: 100vh;
+  display: table;
+  background-attachment: fixed;
+}
+
+.sub-section {
+  @apply py-20;
+  height: 100vh;
+  display: table;
+  background-attachment: fixed;
 }
 
 .line {
-  @apply px-1 py-32 w-full;
+  @apply px-1  w-full;
 }
 
 .line span {
@@ -67,3 +81,27 @@ figcaption {
   @apply relative;
 }
 
+.paragraph {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 12px;
+}
+
+.word {
+  position: relative;
+  margin-right: 7px;
+  margin-top: 12px;
+}
+
+.shadow {
+  position: absolute;
+  opacity: 0.1;
+}
+
+.textTitle {
+  @apply text-2xl md:text-3xl font-bold text-cardText;
+}
+
+.margins {
+  @apply px-4 md:px-20;
+}

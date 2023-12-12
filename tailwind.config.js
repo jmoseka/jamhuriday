@@ -8,13 +8,21 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        istok: ['var(--font--istok)', 'sans-serif'],
-        ibara: ['var(--font--ibara)', 'sans-serif']
+        urban: ['var(--font--urban)', 'sans-serif'],
+        playfair: ['var(--font--playfair)', 'sans-serif']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+
+      colors: {
+        bgcolor: '#1a1a1f',
+        textColor: '#fafafa',
+        bgCard: '#414043',
+        cardText: '#343336',
+        subtitle: '#78787a'
       },
     },
   },

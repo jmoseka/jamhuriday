@@ -1,15 +1,15 @@
-import { Inter, Istok_Web, Ibarra_Real_Nova } from 'next/font/google'
+import { Urbanist, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
-const istok = Istok_Web({
-   subsets: ['latin'],
-    variable: "--font--istok",
-     weight: ["400","700"], 
-    })
+const urban = Urbanist({
+  subsets: ['latin'],
+  variable: "--font--urban"
+})
 
-const ibara = Ibarra_Real_Nova({ 
-  subsets: ['latin'], 
-  variable: "--font--ibara" })
+const playFair = Playfair_Display({
+  subsets: ['latin'],
+  variable: "--font--playfair"
+})
 
 export const metadata = {
   title: 'Jamhuri Day',
@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${ibara.variable} ${istok.variable}` }>
+    <html lang="en" className={`${urban.variable} ${playFair.variable}`}>
       <body >{children}</body>
     </html>
   )

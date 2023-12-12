@@ -34,7 +34,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen w-full bg-bgcolor
+    <main className="flex min-h-screen bg-bgcolor
     flex-col items-center justify-between font-urban">
 
       <section className="hero-section h-[100vh] w-full px-2">
@@ -52,7 +52,7 @@ export default function Home() {
       <section className='px-2 sm:px-[8vw] flex flex-col border'>
 
         <IntroText
-          title="1000BC - 1900's"
+          title="1000BC - 19TH CE"
           subtitle="Pre-colonial era"
           desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
         />

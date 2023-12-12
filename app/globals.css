@@ -27,11 +27,16 @@
 } */
 
 body {
-  background: black;
+  background: red;
+  width: 100vw;
 }
 
 section {
-  @apply text-[#e6e6e6] w-full;
+  @apply text-[#e6e6e6];
+}
+
+main {
+  width: 100vw;
 }
 
 .intro {
@@ -91,6 +96,7 @@ figcaption {
   position: relative;
   margin-right: 7px;
   margin-top: 12px;
+  display: inline-block; /* Ensure the span takes the width of its content */
 }
 
 .shadow {
@@ -104,4 +110,8 @@ figcaption {
 
 .margins {
   @apply px-2 md:px-20;
+}
+
+.button {
+  @apply w-14 h-14 md:w-16 md:h-16 xl:w-[4.6vw] xl:h-[4.6vw] border rounded-full text-sm xl:text-[1vw] text-white md:text-base;
 }

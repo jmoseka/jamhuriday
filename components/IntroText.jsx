@@ -19,7 +19,7 @@ export default function IntroText({ title, subtitle, desc }) {
         <motion.h2
           ref={element}
           style={{ opacity: scrollYProgress }}
-          className="font-josefin text-5xl md:text-7xl lg:text-8xl 2xl:text-[7vw]"
+          className="font-josefin text-[2.6rem] md:text-7xl lg:text-8xl 2xl:text-[7vw]"
         >
           {words.map((word, index) => {
             const start = index / words.length;

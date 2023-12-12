@@ -37,11 +37,11 @@ export default function Home() {
     <main className="flex min-h-screen w-full bg-bgcolor
     flex-col items-center justify-between font-urban">
 
-      <section className="hero-section h-[100vh]  w-full">
-        <div className='hero w-full pt-52
-          text-center margins'>
-          <h1 className='uppercase text-4xl md:text-5xl lg:text-7xl'>In the shadows of freedom</h1>
-          <p className='text-subtitle text-lg md:text-2xl'>Where the spirit of independence soars.</p>
+      <section className="hero-section h-[100vh]  w-full border px-2">
+        <div className='hero w-full pt-[35vh]
+          text-center '>
+          <h1 className='uppercase text-4xl md:text-5xl xl:text-7xl 2xl:text-[5vw]'>In the shadows of freedom</h1>
+          <p className='text-subtitle text-lg xl:text-2xl 2xl:text-[1.7vw] md:leading-6 '>Where the spirit of independence soars.</p>
         </div>
       </section>
 

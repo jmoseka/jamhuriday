@@ -1,4 +1,5 @@
-import { Urbanist, Playfair_Display } from 'next/font/google'
+import { Urbanist, Josefin_Sans
+ } from 'next/font/google'
 import './globals.css'
 
 const urban = Urbanist({
@@ -6,9 +7,9 @@ const urban = Urbanist({
   variable: "--font--urban"
 })
 
-const playFair = Playfair_Display({
+const josefin = Josefin_Sans({
   subsets: ['latin'],
-  variable: "--font--playfair"
+  variable: "--font--josefin"
 })
 
 export const metadata = {
@@ -18,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${urban.variable} ${playFair.variable}`}>
+    <html lang="en" className={`${urban.variable} ${josefin.variable}`}>
       <body >{children}</body>
     </html>
   )

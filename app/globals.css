@@ -31,7 +31,7 @@ body {
 }
 
 section {
-  @apply text-[#e6e6e6];
+  @apply text-[#e6e6e6] w-full;
 }
 
 .intro {
@@ -49,7 +49,7 @@ section {
 }
 
 .line {
-  @apply px-1  w-full;
+  @apply px-1 w-full;
 }
 
 .line span {
@@ -103,5 +103,5 @@ figcaption {
 }
 
 .margins {
-  @apply px-4 md:px-20;
+  @apply px-2 md:px-20;
 }

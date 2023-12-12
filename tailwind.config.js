@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         urban: ['var(--font--urban)', 'sans-serif'],
-        playfair: ['var(--font--playfair)', 'sans-serif']
+        josefin: ['var(--font--josefin)', 'sans-serif']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

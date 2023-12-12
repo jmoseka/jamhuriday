@@ -37,7 +37,7 @@ export default function Home() {
     <main className="flex min-h-screen w-full bg-bgcolor
     flex-col items-center justify-between font-urban">
 
-      <section className="hero-section h-[100vh] w-full  px-2">
+      <section className="hero-section h-[100vh] w-full px-2">
         <div className='hero w-full pt-[35vh]
           text-center '>
           <h1 className='uppercase text-4xl md:text-5xl xl:text-7xl 2xl:text-[5vw]'>In the shadows of freedom</h1>
@@ -49,7 +49,7 @@ export default function Home() {
         <span className=''></span>
       </div>
 
-      <section className='px-2 sm:px-[10vw] flex flex-col border'>
+      <section className='px-2 sm:px-[8vw] flex flex-col border'>
 
         <IntroText
           title="1000BC - 1900's"

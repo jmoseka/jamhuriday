@@ -53,7 +53,7 @@ function PreSection() {
         const cardsToShow = [];
         for (let i = startIndex; i < endIndex; i++) {
             cardsToShow.push(
-                <article className={` ${i % 2 !== 0 ? 'pt-40 w-[40%]' : 'w-[50%] '}`}>
+                <article className={`w-full ${i % 2 !== 0 ? 'md:pt-40 2xl:pt-[12.1vw] md:w-[40%]' : 'md:w-[50%] '}`}>
 
                     <PreCard
                         order={i % 2 === 0 ? '2' : ''}
@@ -69,11 +69,11 @@ function PreSection() {
 
     return (
         <>
-            <div className="section-body flex justify-between gap-10">
+            <div className="border border-red-400 section-body flex flex-col gap-24 md:flex-row md:justify-between md:gap-10">
                 {renderCard()}
             </div>
 
-            <div className={`pt-12 flex  justify-center`}>
+            <div className={`pt-12 flex justify-center`}>
 
                 {
                     currentPage === 1 ?

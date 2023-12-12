@@ -14,8 +14,8 @@ export default function IntroText({ title, subtitle, desc }) {
   const words = title.split(" ");
 
   return (
-    <div className="intro w-full border border-red-400 pt-[27vh]">
-      <div className="h-[100%] flex flex-col gap-10">
+    <div className="intro w-full pt-[27vh]">
+      <div className="h-[100%] flex flex-col gap-10 2xl:gap-28">
         <motion.h2
           ref={element}
           style={{ opacity: scrollYProgress }}
@@ -32,9 +32,9 @@ export default function IntroText({ title, subtitle, desc }) {
           })}
         </motion.h2>
 
-        <div className="flex flex-col gap-2 2xl:gap-24">
+        <div className="flex flex-col gap-2 2xl:gap-16">
           <h3 className="text-subtitle text-xl md:text-2xl 2xl:text-[1.8vw]">{subtitle}</h3>
-          <p className="md:w-[80%] text-[0.93rem] md:text-base 2xl:text-[1vw]  2xl:leading-[1.3vw]">{desc}</p>
+          <p className="md:w-[80%] text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]">{desc}</p>
         </div>
       </div>
     </div>

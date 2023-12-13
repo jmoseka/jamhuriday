@@ -100,13 +100,17 @@ export default function Home() {
         </div>
 
 
-        <div className={`border relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
+        <div className={`relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
           <Image src={maumau} alt='mau mau troops' layout="fill" objectFit="cover" />
         </div>
 
-        <div className='px-8 sm:px-[8vw] h-[100vh] w-[100%] flex items-center justify-center '>
-          <p className='uppercase text-3xl md:text-5xl xl:text-[5rem] 2xl:text-[5vw] text-center font-bold tracking-wider'>MAU MAU REBELLION</p>
+        <div className='px-2 border sm:px-[8vw] py-40 md:py-64 w-[100%] flex flex-col md:flex-row md:items-center items-start
+         justify-center gap-4 md:gap-8 xl:gap-20'>
+          <p className='uppercase text-3xl md:text-5xl xl:text-[4rem]  text-center font-bold tracking-wider'>MAU MAU REBELLION</p>
+          <p className=' text-[0.93rem] md:text-base 2xl:text-[1.1vw]  '>{mauMauText}</p>
         </div>
+
+        
 
       </section>
 
@@ -150,11 +154,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=''>
+      <section className='px-2 sm:px-[8vw]'>
 
         <div className='line'>
           <span></span>
         </div>
+
+        
 
         <IntroText
           title="December 12, 1964"

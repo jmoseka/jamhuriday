@@ -91,7 +91,7 @@ export default function Home() {
       <section>
 
 
-        <div className='px-8 sm:px-[8vw]'>
+        <div className='px-2 sm:px-[8vw]'>
           <IntroText
             title="1900 - 1963"
             subtitle="Colonial Rule and Resistance Movements"
@@ -100,12 +100,12 @@ export default function Home() {
         </div>
 
 
-        <div className='border relative h-[100vh] w-[100%]'>
-          <Image src={maumau} alt='mau mau troops' layout="fill" objectFit={windowWidth > 892 ? 'cover' : 'contain'} />
+        <div className={`border relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
+          <Image src={maumau} alt='mau mau troops' layout="fill" objectFit="cover" />
         </div>
 
         <div className='px-8 sm:px-[8vw] h-[100vh] w-[100%] flex items-center justify-center '>
-          <p className='uppercase text-4xl md:text-5xl xl:text-[5rem] 2xl:text-[6vw] text-center font-bold tracking-wider'>MAU MAU REBELLION</p>
+          <p className='uppercase text-3xl md:text-5xl xl:text-[5rem] 2xl:text-[5vw] text-center font-bold tracking-wider'>MAU MAU REBELLION</p>
         </div>
 
       </section>

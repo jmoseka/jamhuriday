@@ -110,7 +110,7 @@ export default function Home() {
 
 
         <div className={`relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
-          <Image src={maumau} alt='mau mau troops' layout="fill" objectFit="cover" />
+          <Image src={maumau} alt='mau mau troops' fill style={{objectFit:"cover"}} />
         </div>
 
         <div className='px-2 sm:px-[8vw] py-40 md:py-64 w-[100%] flex flex-col md:flex-row md:items-center items-start
@@ -142,7 +142,7 @@ export default function Home() {
         <div className='flex flex-col gap-3 md:flex-row pt-10'>
           <figure>
             <div className='relative h-[50vh] w-[100%]'>
-              <Image src={jomospeak} alt="jomo kenyatta speaking at lancaster" layout='fill' objectFit="cover" />
+              <Image src={jomospeak} alt="jomo kenyatta speaking at lancaster" fill style={{objectFit:"cover"}} />
             </div>
             <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>Mr Jomo Kenyatta (left), President of the Kenya African National Union, and Mr Tom Mboya (check suit) are pictured at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
 
@@ -150,7 +150,7 @@ export default function Home() {
 
           <figure>
             <div className='relative h-[50vh] w-[100%]'>
-              <Image src={jomotom} alt="jomo kenyatta speaking at lancaster" layout='fill' objectFit="cover" />
+              <Image src={jomotom} alt="jomo kenyatta speaking at lancaster" fill style={{objectFit:"cover"}} />
             </div>
             <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>Mr Jomo Kanyatta, President of the Kenya African National Union, speaking at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
 
@@ -177,7 +177,7 @@ export default function Home() {
             <div className='col-span-3'>
               <figure className='w-full flex flex-col items-center'>
                 <div className='relative w-[100%] h-[45vh] sm:h-[65vh] md:h-[75vh]'>
-                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} layout='fill' objectFit="contain"
+                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} fill style={{objectFit:"contain"}}
                   />
                 </div>
                 <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>
@@ -190,7 +190,7 @@ export default function Home() {
               {smallimages.map((image) => (
                 <button key={image.id} className="small-image flex-1" onClick={() => handleClick(image)}>
                   <div className='relative w-full h-[20vh] md:h-[25vh] xl:h-[35vh]' >
-                    <Image layout='fill' objectFit="cover" src={image.src} alt={ image.desc} />
+                    <Image fill style={{objectFit:"cover"}} src={image.src} alt={ image.desc} />
                   </div>
                 </button>
               ))}

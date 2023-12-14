@@ -28,7 +28,7 @@ export default function PreCard({ title, desc, img, align, order }) {
         </motion.p>
 
         <div className=" relative h-[20rem] xl:h[25vw] 2xl:h-[28vw]">
-          <Image src={img} alt={img} layout="fill" objectFit="cover" />
+          <Image src={img} alt={img} fillstyle={{objectFit:"cover"}} />
         </div>
       </div>
     </div>

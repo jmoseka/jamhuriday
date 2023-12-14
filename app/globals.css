@@ -40,6 +40,10 @@ main {
   width: 100vw;
 }
 
+figure {
+  flex: 1;
+}
+
 .intro {
   @apply relative;
   height: 100vh;

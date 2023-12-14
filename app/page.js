@@ -3,6 +3,12 @@ import IntroText from '@/components/IntroText'
 import PreSection from '@/components/PreSection';
 import PresentCard from '@/components/PresentCard';
 import maumau from '../app/img/maumautroop.jpg';
+import jomospeak from '../app/img/jomospeak.png';
+import jomotom from '../app/img/jomotom.png';
+import jomowave from '../app/img/independence/jomowave.png'
+import jomowavecrowd from '../app/img/independence/jomowavecrowd.png'
+import jomoaero from '../app/img/independence/jomoaero.png'
+import jomotraditional from '../app/img/independence/jomotraditional.png'
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
@@ -16,13 +22,14 @@ export default function Home() {
   The Mau Mau uprising ultimately played a crucial role in Kenya's struggle for independence. It brought international attention to the injustices of colonialism and contributed significantly to the push for Kenya's eventual independence, which was achieved in 1963.`;
 
   const [images, setImages] = useState([
-    { id: 1, src: '' },
-    { id: 2, src: '' },
-    { id: 3, src: '' },
-    { id: 4, src: '' },
+    { id: 1, src: jomowave, alt: '(Original Caption) 6/1/1963-Nairobi, Kenya- Waving his wisk the newly-elected Premier of Kenya, Jomo Kenyatta, (R, foreground), greeted throngs of cheering citizens as he rode through the streets of Nairobi.' },
+    { id: 2, src: jomowavecrowd, alt: 'Kenyan politician Jomo Kenyatta waving to cheering crowds during Kenya Independence Day celebrations. (Photo by Harry Benson/Getty Images)' },
+    { id: 3, src: jomotraditional, alt: '13th December 1963: Kenyas first prime minister Jomo Kenyatta wearing colobus skins at the ceremony in Nairobis Uhuru (freedom) Stadium to proclaim Kenyan independence after 68 years of British rule. (Photo by Keystone/Getty Images)' },
+    { id: 4, src: jomoaero, alt: 'Jomo Kenyatta (1897 - 1978), the Prime Minister of Kenya, waves his fly whisk as he leaves London Airport (later Heathrow) after attending the Commonwealth Prime Ministers Conference in London, UK, 20th July 1964. (Photo by Evening Standard/Hulton Archive/Getty Images)' },
   ]);
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [caption, setCaption] = useState(images[0].alt);
   const smallimages = images.slice(1, 4);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -40,6 +47,8 @@ export default function Home() {
 
   const handleClick = (image) => {
     setSelectedImage(image);
+    setCaption(image.alt)
+  
     setImages((prevImages) => {
       const updatedImages = prevImages.filter((img) => img.id !== image.id);
       return [image, ...updatedImages];
@@ -104,13 +113,13 @@ export default function Home() {
           <Image src={maumau} alt='mau mau troops' layout="fill" objectFit="cover" />
         </div>
 
-        <div className='px-2 border sm:px-[8vw] py-40 md:py-64 w-[100%] flex flex-col md:flex-row md:items-center items-start
+        <div className='px-2 sm:px-[8vw] py-40 md:py-64 w-[100%] flex flex-col md:flex-row md:items-center items-start
          justify-center gap-4 md:gap-8 xl:gap-20'>
-          <p className='uppercase text-3xl md:text-5xl xl:text-[4rem]  text-center font-bold tracking-wider'>MAU MAU REBELLION</p>
-          <p className=' text-[0.93rem] md:text-base 2xl:text-[1.1vw]  '>{mauMauText}</p>
+          <p className='uppercase text-[1.6rem] md:text-5xl xl:text-[5rem] 2xl:text-[4vw] text-start md:text-center font-semi-bold md:tracking-wider tracking-wide'>MAU MAU REBELLION</p>
+          <p className=' text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]  '>{mauMauText}</p>
         </div>
 
-        
+
 
       </section>
 
@@ -118,12 +127,11 @@ export default function Home() {
       {/* section Lancaster meeting
       Detailing agreements towards the path to independence
       */}
+      <div className='line'>
+        <span></span>
+      </div>
 
-      <section className=''>
-
-        <div className='line'>
-          <span></span>
-        </div>
+      <section className='px-2 sm:px-[8vw] pb-32 md:pb-50 '>
 
         <IntroText
           title="1960 - 1962"
@@ -131,63 +139,59 @@ export default function Home() {
           desc="This timeline covers the series of events, negotiations, and political developments that ultimately led to Kenya's independence. It includes key figures like Jomo Kenyatta and the Lancaster House Conference of 1960-1962."
         />
 
-        <div className='flex flex-col gap-3 md:flex-row pt-20'>
+        <div className='flex flex-col gap-3 md:flex-row pt-10'>
           <figure>
-            <div className='h-[15rem] border'>
-              <Image src="" alt="image" />
+            <div className='relative h-[50vh] w-[100%]'>
+              <Image src={jomospeak} alt="jomo kenyatta speaking at lancaster" layout='fill' objectFit="cover" />
             </div>
-            <figcaption>Mr Jomo Kenyatta (left), President of the Kenya African National Union, and Mr Tom Mboya (check suit) are pictured at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
+            <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>Mr Jomo Kenyatta (left), President of the Kenya African National Union, and Mr Tom Mboya (check suit) are pictured at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
 
           </figure>
 
           <figure>
-            <div className='h-[15rem] border'>
-              <Image src="" alt="image" />
+            <div className='relative h-[50vh] w-[100%]'>
+              <Image src={jomotom} alt="jomo kenyatta speaking at lancaster" layout='fill' objectFit="cover" />
             </div>
-
-            <figcaption>Mr Jomo Kanyatta, President of the Kenya African National Union, speaking at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.
-
-            </figcaption>
+            <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>Mr Jomo Kanyatta, President of the Kenya African National Union, speaking at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
 
           </figure>
 
         </div>
       </section>
 
-      <section className='px-2 sm:px-[8vw]'>
-
-        <div className='line'>
-          <span></span>
-        </div>
-
-        
-
+      <div className='line'>
+        <span></span>
+      </div>
+      <section className='px-2 sm:px-[8vw] '>
         <IntroText
           title="December 12, 1964"
           subtitle="Jamhuri Day Declaration"
           desc="This timeline celebrates the day the Kenyan flag was raised, and the country's first president, Jomo Kenyatta, took office. These timelines provide a historical context for the significance of Jamhuri Day and help Kenyans reflect on the journey toward self-governance and the birth of their republic."
         />
 
-        <div className='pt-8'>
+        <div>
 
-          <div className='w-full gallery grid grid-cols-3 border gap-y-8'>
+          <div className='w-full gallery grid grid-cols-3 gap-10'>
 
 
             <div className='col-span-3'>
-              <figure>
-                <p>paragraph {selectedImage.id}</p>
-                <Image className=' w-full h-[12rem] md:h-[18rem]' width={200} src={selectedImage.src} alt="image" />
-                <figcaption>
-                  (Original Caption) 6/1/1963-Nairobi, Kenya- Waving his wisk the newly-elected Premier of Kenya, Jomo Kenyatta, (R, foreground), greeted throngs of cheering citizens as he rode through the streets of Nairobi. Accompanying Kenyatta are Tom Mboya, (L), Minister of Justice and Constitutional Affairs; A. Oginga Odinga, Minister for Home Affairs; and James S. Gichuru, Minister for Finance.
+              <figure className='w-full flex flex-col items-center'>
+                <div className='relative w-[100%] h-[45vh] sm:h-[65vh] md:h-[75vh]'>
+                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} layout='fill' objectFit="contain"
+                  />
+                </div>
+                <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>
+                  {caption}
                 </figcaption>
               </figure>
             </div>
 
-            <div className=" flex col-span-3">
+            <div className=" flex col-span-3 gap-2">
               {smallimages.map((image) => (
-                <button key={image.id} className="small-image h-36 flex-1" onClick={() => handleClick(image)}>
-                  <p>Number {image.id}</p>
-                  <Image src={image.src} alt={`Image ${image.id}`} />
+                <button key={image.id} className="small-image flex-1" onClick={() => handleClick(image)}>
+                  <div className='relative w-full h-[20vh] md:h-[25vh] xl:h-[35vh]' >
+                    <Image layout='fill' objectFit="cover" src={image.src} alt={ image.desc} />
+                  </div>
                 </button>
               ))}
             </div>
@@ -202,10 +206,11 @@ export default function Home() {
 
       </section>
 
-      <section className=''>
-        <div className='line'>
-          <span></span>
-        </div>
+      <div className='line'>
+        <span></span>
+      </div>
+
+      <section className='px-2 sm:px-[8vw]'>
 
         <IntroText
           title="Present Day"

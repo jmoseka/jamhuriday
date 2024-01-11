@@ -48,7 +48,7 @@ export default function Home() {
   const handleClick = (image) => {
     setSelectedImage(image);
     setCaption(image.alt)
-  
+
     setImages((prevImages) => {
       const updatedImages = prevImages.filter((img) => img.id !== image.id);
       return [image, ...updatedImages];
@@ -59,7 +59,7 @@ export default function Home() {
     <main className="flex min-h-screen bg-bgcolor
     flex-col items-center justify-between font-urban">
 
-      <section className="hero-section h-[100vh] w-full px-2">
+      <section id='home' className="hero-section h-[100vh] w-full px-2">
         <div className='hero w-full pt-[35vh]
           text-center '>
           <h1 className='uppercase text-4xl md:text-5xl xl:text-7xl 2xl:text-[5vw]'>In the shadows of freedom</h1>
@@ -71,7 +71,7 @@ export default function Home() {
         <span className=''></span>
       </div>
 
-      <section className='px-2 sm:px-[8vw] flex flex-col'>
+      <section id='pre-colonial' className='px-2 sm:px-[8vw] flex flex-col'>
 
         <IntroText
           title="1000BC - 19TH CE"
@@ -97,7 +97,7 @@ export default function Home() {
         <span></span>
       </div>
 
-      <section>
+      <section className='colonial-rule'>
 
 
         <div className='px-2 sm:px-[8vw]'>
@@ -110,7 +110,7 @@ export default function Home() {
 
 
         <div className={`relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
-          <Image src={maumau} alt='mau mau troops' fill style={{objectFit:"cover"}} />
+          <Image src={maumau} alt='mau mau troops' fill style={{ objectFit: "cover" }} />
         </div>
 
         <div className='px-2 sm:px-[8vw] py-40 md:py-64 w-[100%] flex flex-col md:flex-row md:items-center items-start
@@ -131,7 +131,7 @@ export default function Home() {
         <span></span>
       </div>
 
-      <section className='px-2 sm:px-[8vw] pb-32 md:pb-50 '>
+      <section id='path-to-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50 '>
 
         <IntroText
           title="1960 - 1962"
@@ -142,7 +142,7 @@ export default function Home() {
         <div className='flex flex-col gap-3 md:flex-row pt-10'>
           <figure>
             <div className='relative h-[50vh] w-[100%]'>
-              <Image src={jomospeak} alt="jomo kenyatta speaking at lancaster" fill style={{objectFit:"cover"}} />
+              <Image src={jomospeak} alt="jomo kenyatta speaking at lancaster" fill style={{ objectFit: "cover" }} />
             </div>
             <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>Mr Jomo Kenyatta (left), President of the Kenya African National Union, and Mr Tom Mboya (check suit) are pictured at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
 
@@ -150,7 +150,7 @@ export default function Home() {
 
           <figure>
             <div className='relative h-[50vh] w-[100%]'>
-              <Image src={jomotom} alt="jomo kenyatta speaking at lancaster" fill style={{objectFit:"cover"}} />
+              <Image src={jomotom} alt="jomo kenyatta speaking at lancaster" fill style={{ objectFit: "cover" }} />
             </div>
             <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>Mr Jomo Kanyatta, President of the Kenya African National Union, speaking at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
 
@@ -162,7 +162,7 @@ export default function Home() {
       <div className='line'>
         <span></span>
       </div>
-      <section className='px-2 sm:px-[8vw] '>
+      <section id='jamhuri' className='px-2 sm:px-[8vw] pb-32 md:pb-50 '>
         <IntroText
           title="December 12, 1964"
           subtitle="Jamhuri Day Declaration"
@@ -177,7 +177,7 @@ export default function Home() {
             <div className='col-span-3'>
               <figure className='w-full flex flex-col items-center'>
                 <div className='relative w-[100%] h-[45vh] sm:h-[65vh] md:h-[75vh]'>
-                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} fill style={{objectFit:"contain"}}
+                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} fill style={{ objectFit: "contain" }}
                   />
                 </div>
                 <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>
@@ -190,7 +190,7 @@ export default function Home() {
               {smallimages.map((image) => (
                 <button key={image.id} className="small-image flex-1" onClick={() => handleClick(image)}>
                   <div className='relative w-full h-[20vh] md:h-[25vh] xl:h-[35vh]' >
-                    <Image fill style={{objectFit:"cover"}} src={image.src} alt={ image.desc} />
+                    <Image fill style={{ objectFit: "cover" }} src={image.src} alt={image.desc} />
                   </div>
                 </button>
               ))}
@@ -210,12 +210,12 @@ export default function Home() {
         <span></span>
       </div>
 
-      <section className='px-2 sm:px-[8vw]'>
+      <section id='post-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50'>
 
         <IntroText
-          title="Present Day"
+          title="Post-Independence Era"
           subtitle="A sorveign country"
-          desc="Since Jamhuri Day on December 12, 1964, when Kenya became a republic, there have been several indicators and events that demonstrate the country's status as a self-governing and independent nation. Some of these include:"
+          desc="Following its independence from British colonial rule on December 12, 1963, Kenya embarked on a journey of nation-building and self-determination. However, the post-independence era was not without challenges. Political transitions, socio-economic disparities, ethnic tensions, and struggles for democratic governance characterized different phases of Kenya's evolution. Over the decades, the country underwent significant changes, shaping its identity and paving the way for the Kenya we see today."
         />
 
         <div className='pt-16 flex flex-col gap-10 md:gap-16'>
@@ -238,30 +238,40 @@ export default function Home() {
 
       </section>
 
-      <footer className='w-full'>
+      <footer className='w-full '>
         <div className='line'>
           <span className=''></span>
         </div>
-        <div className='flex '>
+
+        <div className=' px-2 sm:px-[8vw] py-10 md:py-10'>
+
+          <div className='flex flex-col gap-6 md:gap-32 text-textColor md:flex-row'>
 
 
-          <div className='text-textColor'>
-            <h2 className='text-xl'>Useful Links</h2>
-            <ul>
-              <li>Home</li>
-              <li>Pre-colonial era</li>
-              <li>Colonial rule and resistance groups</li>
-              <li>Path to Independence</li>
-              <li>The Jamhuri Day</li>
-              <li>Present day</li>
-            </ul>
+            <div>
+              <h2 className='text-xl'>Useful Links</h2>
+              <ul className='text-[0.88rem] pt-4'>
+                <li><a className='cursor-pointer hover:text-slate-400' href='#home'>Home</a></li>
+                <li><a className='cursor-pointer hover:text-slate-400' href='#pre-colonial'>Pre-colonial era</a></li>
+                <li><a className='cursor-pointer hover:text-slate-400' href='#colonial-rule'>Colonial rule and resistance groups</a></li>
+                <li><a className='cursor-pointer hover:text-slate-400' href='#path-to-independence'>Path to Independence</a></li>
+                <li><a className='cursor-pointer hover:text-slate-400' href='#jamhuri'>The Jamhuri Day</a></li>
+                <li><a className='cursor-pointer hover:text-slate-400' href='#post-independence'>Present day</a></li>
+              </ul>
+
+            </div>
+
+            <div className=''>
+              <h2 className='text-xl'>Social Links</h2>
+              <ul className='pt-4 flex gap-3'>
+                <a className='w-[30px] h-[30px] rounded-full bg-red-500 '>
+                </a>
+                <a className='w-[30px] h-[30px]  rounded-full bg-red-500 '>
+                </a>
+              </ul>
+            </div>
 
           </div>
-
-          <div className=''>
-            <h2>Social media</h2>
-          </div>
-
         </div>
       </footer>
 

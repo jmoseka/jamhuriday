@@ -1,5 +1,7 @@
 "use client"
 import IntroText from '@/components/IntroText'
+import { FiGithub } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
 import PreSection from '@/components/PreSection';
 import PresentCard from '@/components/PresentCard';
 import maumau from '../app/img/maumautroop.jpg';
@@ -9,6 +11,10 @@ import jomowave from '../app/img/independence/jomowave.png'
 import jomowavecrowd from '../app/img/independence/jomowavecrowd.png'
 import jomoaero from '../app/img/independence/jomoaero.png'
 import jomotraditional from '../app/img/independence/jomotraditional.png'
+import agri from '../app/img/postindependence/agri.jpg'
+import moi from '../app/img/postindependence/moi.jpg'
+import protest from '../app/img/postindependence/protest.jpg'
+import kibaki from '../app/img/postindependence/kibaki.jpg'
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
@@ -222,6 +228,7 @@ export default function Home() {
 
           <PresentCard
             title='Political Evolution'
+            img={moi}
             desc='In the 1980s and 1990s, Kenya saw influential leaders shaping governance, leading to political shifts, transitions, and constitutional reforms. Pro-democracy movements emerged, paving the way for Kenyas transition from a single-party to a multi-party system, fundamentally altering the nations political landscape.'
 
 
@@ -229,17 +236,20 @@ export default function Home() {
           <PresentCard
             order={2}
             title='Economic Growth and Challenges'
+            img={agri}
             desc='In the 2000s, Kenya focused on economic policies, industrialization, and development strategies to spur growth. However, challenges arose in achieving sustainable economic progress. Efforts were made to reduce poverty, promote rural development, and implement social welfare programs to address socio-economic disparities.
           '
           />
 
           <PresentCard
             title='Constitutional Reforms and Modernization'
+            img={kibaki}
             desc='The 2010s saw Kenya undergo constitutional reforms, reshaping governance. Embracing technological advancements, the nation witnessed improvements in various sectors. Initiatives targeted education, healthcare, and infrastructure development, reflecting a commitment to modernization and progress.'
           />
 
           <PresentCard
             order={2}
+            img={protest}
             title='Challenges and Sociopolitical Developments'
             desc='Addressing corruption, ethnic tensions, and challenges to national unity became focal points in the 2010s. Political landscapes underwent changes, with elections and power transitions influencing governance. Social movements, activism, and civil society engagement played key roles in advocating for reforms.
           '
@@ -276,9 +286,11 @@ export default function Home() {
             <div className=''>
               <h2 className='text-xl'>Social Links</h2>
               <ul className='pt-4 flex gap-3'>
-                <a className='w-[30px] h-[30px] rounded-full bg-red-500 '>
+                <a className='footer-links'>
+                  <FiGithub />
                 </a>
-                <a className='w-[30px] h-[30px]  rounded-full bg-red-500 '>
+                <a className='footer-links'>
+                  <FaXTwitter />
                 </a>
               </ul>
             </div>

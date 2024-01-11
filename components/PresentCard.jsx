@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 export default function PresentCard({ title, desc, img, order }) {
   return (
     <div className="flex flex-col md:flex-row gap-2 md:gap-8">
@@ -8,7 +9,7 @@ export default function PresentCard({ title, desc, img, order }) {
           order === 2 ? "md:order-2" : "md:order-none "
         }`}
       >
-        <Image src="" alt="image" />
+        <Image src={img} alt="image" />
       </div>
 
       <div className="flex-1 order-1 ">

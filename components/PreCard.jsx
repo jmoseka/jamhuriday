@@ -22,7 +22,7 @@ export default function PreCard({ title, desc, img, align, order }) {
         <motion.p
           ref={element}
           style={{ opacity: scrollYProgress }}
-          className="text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]"
+          className="font-light text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]"
         >
           {desc}
         </motion.p>

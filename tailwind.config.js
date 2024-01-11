@@ -21,7 +21,7 @@ module.exports = {
         bgcolor: '#1a1a1f',
         textColor: '#fafafa',
         bgCard: '#414043',
-        cardText: '#343336',
+        cardText: '#7d7d7d',
         subtitle: '#78787a'
       },
     },

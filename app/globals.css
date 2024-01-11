@@ -83,7 +83,7 @@ figure {
 /* Lancaster meeting */
 
 figcaption {
-  @apply text-[0.7rem];
+  @apply text-[0.8rem];
 }
 
 .textTitle {
@@ -121,5 +121,5 @@ figcaption {
 }
 
 .footer-links {
-  @apply w-[30px] h-[30px] rounded-full flex items-center justify-center;
+  @apply text-[#323232] w-[30px] h-[30px] rounded-full flex items-center justify-center bg-[#969696] cursor-pointer hover:bg-transparent border border-[#969696];
 }

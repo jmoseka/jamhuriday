@@ -122,7 +122,7 @@ export default function Home() {
         <div className='px-2 sm:px-[8vw] py-40 md:py-64 w-[100%] flex flex-col md:flex-row md:items-center items-start
          justify-center gap-4 md:gap-8 xl:gap-20'>
           <p className='uppercase text-[1.6rem] md:text-5xl xl:text-[5rem] 2xl:text-[4vw] text-start md:text-center font-semi-bold md:tracking-wider tracking-wide'>MAU MAU REBELLION</p>
-          <p className=' text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]  '>{mauMauText}</p>
+          <p className='font-light text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]  '>{mauMauText}</p>
         </div>
 
 
@@ -216,7 +216,7 @@ export default function Home() {
         <span></span>
       </div>
 
-      <section id='post-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50'>
+      <section id='post-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50'  >
 
         <IntroText
           title="Post-Independence Era"
@@ -224,7 +224,7 @@ export default function Home() {
           desc="Following its independence from British colonial rule on December 12, 1963, Kenya embarked on a journey of nation-building and self-determination. However, the post-independence era was not without challenges. Political transitions, socio-economic disparities, ethnic tensions, and struggles for democratic governance characterized different phases of Kenya's evolution. Over the decades, the country underwent significant changes, shaping its identity and paving the way for the Kenya we see today."
         />
 
-        <div className='pt-16 flex flex-col gap-10 md:gap-16'>
+        <div className='pt-16 flex flex-col gap-12 md:gap-32 2xl:gap-44 '>
 
           <PresentCard
             title='Political Evolution'
@@ -260,31 +260,31 @@ export default function Home() {
 
       </section>
 
-      <footer className='w-full '>
+      <footer className='w-full  '>
         <div className='line'>
           <span className=''></span>
         </div>
 
         <div className=' px-2 sm:px-[8vw] py-10 md:py-10'>
 
-          <div className='flex flex-col gap-6 md:gap-32 text-textColor md:flex-row'>
+          <div className='flex flex-col gap-6 md:gap-32 text-subtitle md:flex-row'>
 
 
             <div>
-              <h2 className='text-xl'>Useful Links</h2>
+              <h2 className='text-xl font-semibold'>Useful Links</h2>
               <ul className='text-[0.88rem] pt-4'>
-                <li><a className='cursor-pointer hover:text-slate-400' href='#home'>Home</a></li>
-                <li><a className='cursor-pointer hover:text-slate-400' href='#pre-colonial'>Pre-colonial era</a></li>
-                <li><a className='cursor-pointer hover:text-slate-400' href='#colonial-rule'>Colonial rule and resistance groups</a></li>
-                <li><a className='cursor-pointer hover:text-slate-400' href='#path-to-independence'>Path to Independence</a></li>
-                <li><a className='cursor-pointer hover:text-slate-400' href='#jamhuri'>The Jamhuri Day</a></li>
-                <li><a className='cursor-pointer hover:text-slate-400' href='#post-independence'>Present day</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#home'>Home</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#pre-colonial'>Pre-colonial era</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#colonial-rule'>Colonial rule and resistance groups</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#path-to-independence'>Path to Independence</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#jamhuri'>The Jamhuri Day</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#post-independence'>Present day</a></li>
               </ul>
 
             </div>
 
             <div className=''>
-              <h2 className='text-xl'>Social Links</h2>
+              <h2 className='text-xl font-semibold'>Social Links</h2>
               <ul className='pt-4 flex gap-3'>
                 <a className='footer-links'>
                   <FiGithub />

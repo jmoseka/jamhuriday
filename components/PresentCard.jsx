@@ -4,7 +4,7 @@ export default function PresentCard({ title, desc, img, order }) {
   return (
     <div className="flex flex-col md:flex-row gap-2 md:gap-8">
       <div
-        className={`relative h-[15rem]  xl:h-[20rem] 2xl:h-[23vw] order-2  md:flex-1 border ${
+        className={`relative h-[15rem]  xl:h-[20rem] 2xl:h-[23vw] order-2  md:flex-1 ${
           order === 2 ? "md:order-2" : "md:order-none "
         }`}
       >

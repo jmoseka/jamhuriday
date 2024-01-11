@@ -221,15 +221,27 @@ export default function Home() {
         <div className='pt-16 flex flex-col gap-10 md:gap-16'>
 
           <PresentCard
-            title='The Constitution'
-            desc='Kenya has had its own constitution since achieving independence. The countrys constitution outlines the framework for government, the separation of powers, and the rights and responsibilities of its citizens.
-          '
+            title='Political Evolution'
+            desc='In the 1980s and 1990s, Kenya saw influential leaders shaping governance, leading to political shifts, transitions, and constitutional reforms. Pro-democracy movements emerged, paving the way for Kenyas transition from a single-party to a multi-party system, fundamentally altering the nations political landscape.'
+
 
           />
           <PresentCard
             order={2}
-            title='The Constitution'
-            desc='Kenya has had its own constitution since achieving independence. The countrys constitution outlines the framework for government, the separation of powers, and the rights and responsibilities of its citizens.
+            title='Economic Growth and Challenges'
+            desc='In the 2000s, Kenya focused on economic policies, industrialization, and development strategies to spur growth. However, challenges arose in achieving sustainable economic progress. Efforts were made to reduce poverty, promote rural development, and implement social welfare programs to address socio-economic disparities.
+          '
+          />
+
+          <PresentCard
+            title='Constitutional Reforms and Modernization'
+            desc='The 2010s saw Kenya undergo constitutional reforms, reshaping governance. Embracing technological advancements, the nation witnessed improvements in various sectors. Initiatives targeted education, healthcare, and infrastructure development, reflecting a commitment to modernization and progress.'
+          />
+
+          <PresentCard
+            order={2}
+            title='Challenges and Sociopolitical Developments'
+            desc='Addressing corruption, ethnic tensions, and challenges to national unity became focal points in the 2010s. Political landscapes underwent changes, with elections and power transitions influencing governance. Social movements, activism, and civil society engagement played key roles in advocating for reforms.
           '
           />
 

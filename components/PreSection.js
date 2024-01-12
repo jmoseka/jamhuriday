@@ -53,7 +53,7 @@ function PreSection() {
         const cardsToShow = [];
         for (let i = startIndex; i < endIndex; i++) {
             cardsToShow.push(
-                <article className={` ${i % 2 !== 0 ? 'pt-40 w-[40%]' : 'w-[50%] '}`}>
+                <article className={`w-full ${i % 2 !== 0 ? 'md:pt-40 2xl:pt-[12.1vw] md:w-[40%]' : 'md:w-[50%] '}`}>
 
                     <PreCard
                         order={i % 2 === 0 ? '2' : ''}
@@ -69,20 +69,20 @@ function PreSection() {
 
     return (
         <>
-            <div className="section-body flex justify-between gap-10 margins">
+            <div className="section-body flex flex-col gap-20 md:flex-row md:justify-between md:gap-10">
                 {renderCard()}
             </div>
 
-            <div className={`pt-12 flex  justify-center`}>
+            <div className={`pt-12 md:pt-24  flex justify-center`}>
 
                 {
                     currentPage === 1 ?
                         <div className='w-fit'>
-                            <button onClick={() => nextPage()} type='button' className='w-14 h-14 border rounded-full text-white text-sm'>NEXT</button>
+                            <button onClick={() => nextPage()} type='button' className='button'>NEXT</button>
                         </div>
                         :
                         <div>
-                            <button onClick={() => prevPage()} type='button' className='w-14 h-14 border rounded-full text-white text-sm'>PREV</button>
+                            <button onClick={() => prevPage()} type='button' className='button'>PREV</button>
                         </div>
                 }
 

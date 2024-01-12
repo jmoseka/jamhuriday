@@ -27,11 +27,20 @@
 } */
 
 body {
-  background: black;
+  width: 100vw;
+  min-width: 230px;
 }
 
 section {
   @apply text-[#e6e6e6];
+}
+
+main {
+  width: 100vw;
+}
+
+figure {
+  flex: 1;
 }
 
 .intro {
@@ -49,7 +58,7 @@ section {
 }
 
 .line {
-  @apply px-1  w-full;
+  @apply px-1 w-full;
 }
 
 .line span {
@@ -74,7 +83,7 @@ section {
 /* Lancaster meeting */
 
 figcaption {
-  @apply text-[0.7rem];
+  @apply text-[0.8rem];
 }
 
 .textTitle {
@@ -91,6 +100,7 @@ figcaption {
   position: relative;
   margin-right: 7px;
   margin-top: 12px;
+  display: inline-block; /* Ensure the span takes the width of its content */
 }
 
 .shadow {
@@ -99,9 +109,17 @@ figcaption {
 }
 
 .textTitle {
-  @apply text-2xl md:text-3xl font-bold text-cardText;
+  @apply font-medium text-cardText;
 }
 
 .margins {
-  @apply px-4 md:px-20;
+  @apply px-2 md:px-20;
+}
+
+.button {
+  @apply w-14 h-14 md:w-16 md:h-16 xl:w-[4.6vw] xl:h-[4.6vw] border rounded-full text-sm xl:text-[1vw] text-white md:text-base;
+}
+
+.footer-links {
+  @apply text-[#323232] w-[30px] h-[30px] rounded-full flex items-center justify-center bg-[#969696] cursor-pointer hover:bg-transparent border border-[#969696];
 }

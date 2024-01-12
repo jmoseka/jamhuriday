@@ -1,10 +1,22 @@
 "use client"
 import IntroText from '@/components/IntroText'
+import { FiGithub } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
 import PreSection from '@/components/PreSection';
 import PresentCard from '@/components/PresentCard';
-import ResistantCard from '@/components/ResistantCard'
-import Image from 'next/image'
-import { useState } from 'react';
+import maumau from '../app/img/maumautroop.jpg';
+import jomospeak from '../app/img/jomospeak.png';
+import jomotom from '../app/img/jomotom.png';
+import jomowave from '../app/img/independence/jomowave.png'
+import jomowavecrowd from '../app/img/independence/jomowavecrowd.png'
+import jomoaero from '../app/img/independence/jomoaero.png'
+import jomotraditional from '../app/img/independence/jomotraditional.png'
+import agri from '../app/img/postindependence/agri.jpg'
+import moi from '../app/img/postindependence/moi.jpg'
+import protest from '../app/img/postindependence/protest.jpg'
+import kibaki from '../app/img/postindependence/kibaki.jpg'
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 
 export default function Home() {
@@ -16,17 +28,33 @@ export default function Home() {
   The Mau Mau uprising ultimately played a crucial role in Kenya's struggle for independence. It brought international attention to the injustices of colonialism and contributed significantly to the push for Kenya's eventual independence, which was achieved in 1963.`;
 
   const [images, setImages] = useState([
-    { id: 1, src: '' },
-    { id: 2, src: '' },
-    { id: 3, src: '' },
-    { id: 4, src: '' },
+    { id: 1, src: jomowave, alt: '(Original Caption) 6/1/1963-Nairobi, Kenya- Waving his wisk the newly-elected Premier of Kenya, Jomo Kenyatta, (R, foreground), greeted throngs of cheering citizens as he rode through the streets of Nairobi.' },
+    { id: 2, src: jomowavecrowd, alt: 'Kenyan politician Jomo Kenyatta waving to cheering crowds during Kenya Independence Day celebrations. (Photo by Harry Benson/Getty Images)' },
+    { id: 3, src: jomotraditional, alt: '13th December 1963: Kenyas first prime minister Jomo Kenyatta wearing colobus skins at the ceremony in Nairobis Uhuru (freedom) Stadium to proclaim Kenyan independence after 68 years of British rule. (Photo by Keystone/Getty Images)' },
+    { id: 4, src: jomoaero, alt: 'Jomo Kenyatta (1897 - 1978), the Prime Minister of Kenya, waves his fly whisk as he leaves London Airport (later Heathrow) after attending the Commonwealth Prime Ministers Conference in London, UK, 20th July 1964. (Photo by Evening Standard/Hulton Archive/Getty Images)' },
   ]);
 
   const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [caption, setCaption] = useState(images[0].alt);
   const smallimages = images.slice(1, 4);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleWindowResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowResize);
+    // Clean up the event listener when component unmounts
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   const handleClick = (image) => {
     setSelectedImage(image);
+    setCaption(image.alt)
+
     setImages((prevImages) => {
       const updatedImages = prevImages.filter((img) => img.id !== image.id);
       return [image, ...updatedImages];
@@ -34,23 +62,25 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen w-full bg-bgcolor
+    <main className="flex min-h-screen bg-bgcolor
     flex-col items-center justify-between font-urban">
 
-      <section className="hero-section h-[100vh]  w-full">
-        <div className='hero w-full pt-52
-          text-center margins'>
-          <h1 className='uppercase text-4xl md:text-5xl lg:text-7xl'>In the shadows of freedom</h1>
-          <p className='text-subtitle text-lg md:text-2xl'>Where the spirit of independence soars.</p>
+      <section id='home' className="hero-section h-[100vh] w-full px-2">
+        <div className='hero w-full pt-[35vh]
+          text-center '>
+          <h1 className='uppercase text-4xl md:text-5xl xl:text-7xl 2xl:text-[5vw]'>In the shadows of freedom</h1>
+          <p className='text-subtitle text-lg xl:text-2xl 2xl:text-[1.7vw] md:leading-6 '>Where the spirit of independence soars.</p>
         </div>
       </section>
 
-      <section className='flex flex-col'>
-        <div className='line'>
-          <span className=''></span>
-        </div>
+      <div className='line'>
+        <span className=''></span>
+      </div>
+
+      <section id='pre-colonial' className='px-2 sm:px-[8vw] flex flex-col'>
+
         <IntroText
-          title="1000BC - 1900's"
+          title="1000BC - 19TH CE"
           subtitle="Pre-colonial era"
           desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
         />
@@ -69,36 +99,33 @@ export default function Home() {
       Detailing information in a gazette structure stsyle
       */}
 
-      <section className=''>
-        <div className='line'>
-          <span></span>
+      <div className='line'>
+        <span></span>
+      </div>
+
+      <section className='colonial-rule'>
+
+
+        <div className='px-2 sm:px-[8vw]'>
+          <IntroText
+            title="1900 - 1963"
+            subtitle="Colonial Rule and Resistance Movements"
+            desc="This timeline highlights the period of British colonial rule, which lasted from the late 19th century until Kenya's independence in 1963. It includes the struggles and resistance against colonial oppression and exploitation."
+          />
         </div>
 
-        <IntroText
-          title="1900 - 1963"
-          subtitle="Colonial Rule and Resistance Movements"
-          desc="This timeline highlights the period of British colonial rule, which lasted from the late 19th century until Kenya's independence in 1963. It includes the struggles and resistance against colonial oppression and exploitation."
-        />
 
-
-        <div className='margins flex flex-col gap-10 md:gap-20 pt-14'>
-          <article>
-            <ResistantCard
-              float='left'
-              title='Mau Mau Rebellion'
-              desc={mauMauText}
-            />
-          </article>
-
-          <article>
-            <ResistantCard
-              align='right'
-              float='right'
-              title='Mau Mau Rebellion'
-              desc={mauMauText}
-            />
-          </article>
+        <div className={`relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
+          <Image src={maumau} alt='mau mau troops' fill style={{ objectFit: "cover" }} />
         </div>
+
+        <div className='px-2 sm:px-[8vw] py-40 md:py-64 w-[100%] flex flex-col md:flex-row md:items-center items-start
+         justify-center gap-4 md:gap-8 xl:gap-20'>
+          <p className='uppercase text-[1.6rem] md:text-5xl xl:text-[5rem] 2xl:text-[4vw] text-start md:text-center font-semi-bold md:tracking-wider tracking-wide'>MAU MAU REBELLION</p>
+          <p className='font-light text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]  '>{mauMauText}</p>
+        </div>
+
+
 
       </section>
 
@@ -106,12 +133,11 @@ export default function Home() {
       {/* section Lancaster meeting
       Detailing agreements towards the path to independence
       */}
+      <div className='line'>
+        <span></span>
+      </div>
 
-      <section className=''>
-
-        <div className='line'>
-          <span></span>
-        </div>
+      <section id='path-to-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50 '>
 
         <IntroText
           title="1960 - 1962"
@@ -119,61 +145,59 @@ export default function Home() {
           desc="This timeline covers the series of events, negotiations, and political developments that ultimately led to Kenya's independence. It includes key figures like Jomo Kenyatta and the Lancaster House Conference of 1960-1962."
         />
 
-        <div className='flex flex-col gap-3 md:flex-row pt-20'>
+        <div className='flex flex-col gap-3 md:flex-row pt-10'>
           <figure>
-            <div className='h-[15rem] border'>
-              <Image src="" alt="image" />
+            <div className='relative h-[50vh] w-[100%]'>
+              <Image src={jomospeak} alt="jomo kenyatta speaking at lancaster" fill style={{ objectFit: "cover" }} />
             </div>
-            <figcaption>Mr Jomo Kenyatta (left), President of the Kenya African National Union, and Mr Tom Mboya (check suit) are pictured at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
+            <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>Mr Jomo Kenyatta (left), President of the Kenya African National Union, and Mr Tom Mboya (check suit) are pictured at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
 
           </figure>
 
           <figure>
-            <div className='h-[15rem] border'>
-              <Image src="" alt="image" />
+            <div className='relative h-[50vh] w-[100%]'>
+              <Image src={jomotom} alt="jomo kenyatta speaking at lancaster" fill style={{ objectFit: "cover" }} />
             </div>
-
-            <figcaption>Mr Jomo Kanyatta, President of the Kenya African National Union, speaking at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.
-
-            </figcaption>
+            <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>Mr Jomo Kanyatta, President of the Kenya African National Union, speaking at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
 
           </figure>
 
         </div>
       </section>
 
-      <section className=''>
-
-        <div className='line'>
-          <span></span>
-        </div>
-
+      <div className='line'>
+        <span></span>
+      </div>
+      <section id='jamhuri' className='px-2 sm:px-[8vw] pb-32 md:pb-50 '>
         <IntroText
           title="December 12, 1964"
           subtitle="Jamhuri Day Declaration"
           desc="This timeline celebrates the day the Kenyan flag was raised, and the country's first president, Jomo Kenyatta, took office. These timelines provide a historical context for the significance of Jamhuri Day and help Kenyans reflect on the journey toward self-governance and the birth of their republic."
         />
 
-        <div className='pt-8'>
+        <div>
 
-          <div className='w-full gallery grid grid-cols-3 border gap-y-8'>
+          <div className='w-full gallery grid grid-cols-3 gap-10'>
 
 
             <div className='col-span-3'>
-              <figure>
-                <p>paragraph {selectedImage.id}</p>
-                <Image className=' w-full h-[12rem] md:h-[18rem]' width={200} src={selectedImage.src} alt="image" />
-                <figcaption>
-                  (Original Caption) 6/1/1963-Nairobi, Kenya- Waving his wisk the newly-elected Premier of Kenya, Jomo Kenyatta, (R, foreground), greeted throngs of cheering citizens as he rode through the streets of Nairobi. Accompanying Kenyatta are Tom Mboya, (L), Minister of Justice and Constitutional Affairs; A. Oginga Odinga, Minister for Home Affairs; and James S. Gichuru, Minister for Finance.
+              <figure className='w-full flex flex-col items-center'>
+                <div className='relative w-[100%] h-[45vh] sm:h-[65vh] md:h-[75vh]'>
+                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} fill style={{ objectFit: "contain" }}
+                  />
+                </div>
+                <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>
+                  {caption}
                 </figcaption>
               </figure>
             </div>
 
-            <div className=" flex col-span-3">
+            <div className=" flex col-span-3 gap-2">
               {smallimages.map((image) => (
-                <button key={image.id} className="small-image h-36 flex-1" onClick={() => handleClick(image)}>
-                  <p>Number {image.id}</p>
-                  <Image src={image.src} alt={`Image ${image.id}`} />
+                <button key={image.id} className="small-image flex-1" onClick={() => handleClick(image)}>
+                  <div className='relative w-full h-[20vh] md:h-[25vh] xl:h-[35vh]' >
+                    <Image fill style={{ objectFit: "cover" }} src={image.src} alt={image.desc} />
+                  </div>
                 </button>
               ))}
             </div>
@@ -188,29 +212,46 @@ export default function Home() {
 
       </section>
 
-      <section className=''>
-        <div className='line'>
-          <span></span>
-        </div>
+      <div className='line'>
+        <span></span>
+      </div>
+
+      <section id='post-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50'  >
 
         <IntroText
-          title="Present Day"
+          title="Post-Independence Era"
           subtitle="A sorveign country"
-          desc="Since Jamhuri Day on December 12, 1964, when Kenya became a republic, there have been several indicators and events that demonstrate the country's status as a self-governing and independent nation. Some of these include:"
+          desc="Following its independence from British colonial rule on December 12, 1963, Kenya embarked on a journey of nation-building and self-determination. However, the post-independence era was not without challenges. Political transitions, socio-economic disparities, ethnic tensions, and struggles for democratic governance characterized different phases of Kenya's evolution. Over the decades, the country underwent significant changes, shaping its identity and paving the way for the Kenya we see today."
         />
 
-        <div className='pt-16 flex flex-col gap-10 md:gap-16'>
+        <div className='pt-16 flex flex-col gap-12 md:gap-32 2xl:gap-44 '>
 
           <PresentCard
-            title='The Constitution'
-            desc='Kenya has had its own constitution since achieving independence. The countrys constitution outlines the framework for government, the separation of powers, and the rights and responsibilities of its citizens.
-          '
+            title='Political Evolution'
+            img={moi}
+            desc='In the 1980s and 1990s, Kenya saw influential leaders shaping governance, leading to political shifts, transitions, and constitutional reforms. Pro-democracy movements emerged, paving the way for Kenyas transition from a single-party to a multi-party system, fundamentally altering the nations political landscape.'
+
 
           />
           <PresentCard
             order={2}
-            title='The Constitution'
-            desc='Kenya has had its own constitution since achieving independence. The countrys constitution outlines the framework for government, the separation of powers, and the rights and responsibilities of its citizens.
+            title='Economic Growth and Challenges'
+            img={agri}
+            desc='In the 2000s, Kenya focused on economic policies, industrialization, and development strategies to spur growth. However, challenges arose in achieving sustainable economic progress. Efforts were made to reduce poverty, promote rural development, and implement social welfare programs to address socio-economic disparities.
+          '
+          />
+
+          <PresentCard
+            title='Constitutional Reforms and Modernization'
+            img={kibaki}
+            desc='The 2010s saw Kenya undergo constitutional reforms, reshaping governance. Embracing technological advancements, the nation witnessed improvements in various sectors. Initiatives targeted education, healthcare, and infrastructure development, reflecting a commitment to modernization and progress.'
+          />
+
+          <PresentCard
+            order={2}
+            img={protest}
+            title='Challenges and Sociopolitical Developments'
+            desc='Addressing corruption, ethnic tensions, and challenges to national unity became focal points in the 2010s. Political landscapes underwent changes, with elections and power transitions influencing governance. Social movements, activism, and civil society engagement played key roles in advocating for reforms.
           '
           />
 
@@ -219,30 +260,42 @@ export default function Home() {
 
       </section>
 
-      <footer className='w-full'>
+      <footer className='w-full  '>
         <div className='line'>
           <span className=''></span>
         </div>
-        <div className='flex '>
+
+        <div className=' px-2 sm:px-[8vw] py-10 md:py-10'>
+
+          <div className='flex flex-col gap-6 md:gap-32 text-subtitle md:flex-row'>
 
 
-          <div className='text-textColor'>
-            <h2 className='text-xl'>Useful Links</h2>
-            <ul>
-              <li>Home</li>
-              <li>Pre-colonial era</li>
-              <li>Colonial rule and resistance groups</li>
-              <li>Path to Independence</li>
-              <li>The Jamhuri Day</li>
-              <li>Present day</li>
-            </ul>
+            <div>
+              <h2 className='text-xl font-semibold'>Useful Links</h2>
+              <ul className='text-[0.88rem] pt-4'>
+                <li><a className='cursor-pointer hover:textColor' href='#home'>Home</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#pre-colonial'>Pre-colonial era</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#colonial-rule'>Colonial rule and resistance groups</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#path-to-independence'>Path to Independence</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#jamhuri'>The Jamhuri Day</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#post-independence'>Present day</a></li>
+              </ul>
+
+            </div>
+
+            <div className=''>
+              <h2 className='text-xl font-semibold'>Social Links</h2>
+              <ul className='pt-4 flex gap-3'>
+                <a className='footer-links'>
+                  <FiGithub />
+                </a>
+                <a className='footer-links'>
+                  <FaXTwitter />
+                </a>
+              </ul>
+            </div>
 
           </div>
-
-          <div className=''>
-            <h2>Social media</h2>
-          </div>
-
         </div>
       </footer>
 

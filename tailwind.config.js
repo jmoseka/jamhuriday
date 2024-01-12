@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         urban: ['var(--font--urban)', 'sans-serif'],
-        playfair: ['var(--font--playfair)', 'sans-serif']
+        josefin: ['var(--font--josefin)', 'sans-serif']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -21,7 +21,7 @@ module.exports = {
         bgcolor: '#1a1a1f',
         textColor: '#fafafa',
         bgCard: '#414043',
-        cardText: '#343336',
+        cardText: '#7d7d7d',
         subtitle: '#78787a'
       },
     },

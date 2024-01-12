@@ -14,12 +14,12 @@ export default function IntroText({ title, subtitle, desc }) {
   const words = title.split(" ");
 
   return (
-    <div className="intro w-full margins">
-      <div className="h-[100%] absolute top-44 flex flex-col gap-10">
+    <div className="intro w-full pt-[27vh]">
+      <div className="h-[100%] flex flex-col gap-10 2xl:gap-28">
         <motion.h2
           ref={element}
           style={{ opacity: scrollYProgress }}
-          className="font-playfair text-5xl md:text-7xl lg:text-8xl"
+          className="font-josefin text-[3rem] md:text-7xl lg:text-8xl 2xl:text-[7vw]"
         >
           {words.map((word, index) => {
             const start = index / words.length;
@@ -32,9 +32,9 @@ export default function IntroText({ title, subtitle, desc }) {
           })}
         </motion.h2>
 
-        <div className="self-end">
-          <h3 className="text-subtitle md:text-lg ">{subtitle}</h3>
-          <p className="w-[80%]">{desc}</p>
+        <div className="flex flex-col gap-2 2xl:gap-16">
+          <h3 className="text-subtitle text-xl md:text-2xl 2xl:text-[1.8vw]">{subtitle}</h3>
+          <p className="font-light md:w-[80%] text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]">{desc}</p>
         </div>
       </div>
     </div>

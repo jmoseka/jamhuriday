@@ -46,6 +46,16 @@ function PreSection() {
         }
     }
 
+    const [displayedItems, setDisplayedItems] = useState(2);
+
+    const handleShowMore = () => {
+        setDisplayedItems(items.length);
+    };
+
+    const handleShowLess = () => {
+        setDisplayedItems(2);
+    };
+
     const renderCard = () => {
         const startIndex = (currentPage - 1) * cardsPerPage;
         const endIndex = Math.min(startIndex + cardsPerPage, totalCards);
@@ -68,27 +78,54 @@ function PreSection() {
     }
 
     return (
+
         <>
-            <div className="section-body flex flex-col gap-16 md:flex-row md:justify-between md:gap-10">
-                {renderCard()}
-            </div>
+           <div className="section-body flex flex-col gap-16 md:flex-row md:justify-between md:gap-10">
+  {items.slice(0, displayedItems).map((item, index) => (
+    <div
+      key={index}
+      className={`w-full ${index % 2 !== 0 ? 'md:pt-40 2xl:pt-[12.1vw] md:w-[40%]' : 'md:w-[50%]'} ${
+        index % 2 !== 0 && index !== 0 ? 'md:ml-[5%]' : '' // Add margin for odd index and not the first item
+      }`}
+    >
+      <PreCard
+        order={index % 2 === 0 ? '2' : ''}
+        title={item.title}
+        desc={item.desc}
+        img={item.img}
+      />
+    </div>
+  ))}
+</div>
+{displayedItems === 2 ? (
+  <button onClick={handleShowMore}>Show More</button>
+) : (
+  <button onClick={handleShowLess}>Show Less</button>
+)}
 
-            <div className={`pt-12 md:pt-24  flex justify-center`}>
-
-                {
-                    currentPage === 1 ?
-                        <div className='w-fit'>
-                            <button onClick={() => nextPage()} type='button' className='button'>VIEW MORE</button>
-                        </div>
-                        :
-                        <div>
-                            <button onClick={() => prevPage()} type='button' className='button'>PREV</button>
-                        </div>
-                }
-
-
-            </div>
         </>
+
+        // <>
+        //     <div className="section-body flex flex-col gap-16 md:flex-row md:justify-between md:gap-10">
+        //         {renderCard()}
+        //     </div>
+
+        //     <div className={`pt-12 md:pt-24  flex justify-center`}>
+
+        //         {
+        //             currentPage === 1 ?
+        //                 <div className='w-fit'>
+        //                     <button onClick={() => nextPage()} type='button' className='button'>VIEW MORE</button>
+        //                 </div>
+        //                 :
+        //                 <div>
+        //                     <button onClick={() => prevPage()} type='button' className='button'>VIEW LESS</button>
+        //                 </div>
+        //         }
+
+
+        //     </div>
+        // </>
     )
 }
 

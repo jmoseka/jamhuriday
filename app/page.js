@@ -37,13 +37,14 @@ export default function Home() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const [caption, setCaption] = useState(images[0].alt);
   const smallimages = images.slice(1, 4);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(null);
 
   const handleWindowResize = () => {
     setWindowWidth(window.innerWidth);
   };
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleWindowResize);
     // Clean up the event listener when component unmounts
     return () => {

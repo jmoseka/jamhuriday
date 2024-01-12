@@ -8,13 +8,13 @@ export default function IntroText({ title, subtitle, desc }) {
     target: element,
     // start, 0.9 - 90% of the window when the opacity style start taking effect
     // at 0.35 at 35% opacity is 1
-    offset: ["start end", "start 0.25"],
+    offset: ["start end", "start 0.15"],
   });
 
   const words = title.split(" ");
 
   return (
-    <div className="intro w-full pt-[20vh]">
+    <div className="intro w-full ">
       <div className="h-[100%] flex flex-col gap-10 2xl:gap-28">
         <motion.h2
           ref={element}
@@ -34,7 +34,7 @@ export default function IntroText({ title, subtitle, desc }) {
 
         <div className="flex flex-col gap-2 2xl:gap-16">
           <h3 className="text-subtitle text-xl md:text-2xl 2xl:text-[1.8vw]">{subtitle}</h3>
-          <p className="font-light md:w-[80%] text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]">{desc}</p>
+          <p className="body-text">{desc}</p>
         </div>
       </div>
     </div>

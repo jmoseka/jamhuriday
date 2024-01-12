@@ -44,8 +44,8 @@ figure {
 }
 
 .intro {
-  @apply relative;
-  height: 100vh;
+  @apply relative py-44;
+
   display: table;
   background-attachment: fixed;
 }
@@ -108,8 +108,16 @@ figcaption {
   opacity: 0.1;
 }
 
+.body-text {
+  @apply font-light tracking-wide text-[0.97rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw];
+}
+
 .textTitle {
   @apply font-medium text-cardText;
+}
+
+.heading-two {
+  @apply text-2xl md:text-3xl 2xl:text-[2vw] text-cardText;
 }
 
 .margins {

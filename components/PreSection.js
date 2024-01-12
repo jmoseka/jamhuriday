@@ -78,7 +78,7 @@ function PreSection() {
                 {
                     currentPage === 1 ?
                         <div className='w-fit'>
-                            <button onClick={() => nextPage()} type='button' className='button'>NEXT</button>
+                            <button onClick={() => nextPage()} type='button' className='button'>VIEW MORE</button>
                         </div>
                         :
                         <div>

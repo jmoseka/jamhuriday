@@ -125,7 +125,7 @@ figcaption {
 }
 
 .button {
-  @apply w-14 h-14 md:w-16 md:h-16 xl:w-[4.6vw] xl:h-[4.6vw] border rounded-full text-sm xl:text-[1vw] text-white md:text-base;
+  @apply p-2 md:w-16 md:h-16 xl:w-[4.6vw] xl:h-[4.6vw] border rounded-lg text-sm xl:text-[1vw] text-white md:text-base;
 }
 
 .footer-links {

@@ -273,12 +273,12 @@ export default function Home() {
             <div>
               <h2 className='text-xl font-semibold'>Useful Links</h2>
               <ul className='text-[0.88rem] pt-4'>
-                <li><a className='cursor-pointer hover:textColor' href='#home'>Home</a></li>
-                <li><a className='cursor-pointer hover:textColor' href='#pre-colonial'>Pre-colonial era</a></li>
-                <li><a className='cursor-pointer hover:textColor' href='#colonial-rule'>Colonial rule and resistance groups</a></li>
-                <li><a className='cursor-pointer hover:textColor' href='#path-to-independence'>Path to Independence</a></li>
-                <li><a className='cursor-pointer hover:textColor' href='#jamhuri'>The Jamhuri Day</a></li>
-                <li><a className='cursor-pointer hover:textColor' href='#post-independence'>Present day</a></li>
+                <li><a className='cursor-pointer hover:text-textColor' href='#home'>Home</a></li>
+                <li><a className='cursor-pointer hover:text-textColor' href='#pre-colonial'>Pre-colonial era</a></li>
+                <li><a className='cursor-pointer hover:text-textColor' href='#colonial-rule'>Colonial rule and resistance groups</a></li>
+                <li><a className='cursor-pointer hover:text-textColor' href='#path-to-independence'>Path to Independence</a></li>
+                <li><a className='cursor-pointer hover:text-textColor' href='#jamhuri'>The Jamhuri Day</a></li>
+                <li><a className='cursor-pointer hover:text-textColor' href='#post-independence'>Present day</a></li>
               </ul>
 
             </div>

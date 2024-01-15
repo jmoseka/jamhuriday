@@ -125,9 +125,13 @@ figcaption {
 }
 
 .button {
-  @apply p-2 md:w-16 md:h-16 xl:w-[4.6vw] xl:h-[4.6vw] border rounded-lg text-sm xl:text-[1vw] text-white md:text-base;
+  @apply py-2 px-4 border rounded-lg text-sm xl:text-[1vw] text-white w-fit;
 }
 
 .footer-links {
   @apply text-[#323232] w-[30px] h-[30px] rounded-full flex items-center justify-center bg-[#969696] cursor-pointer hover:bg-transparent border border-[#969696];
+}
+
+.self-end {
+  align-self: end;
 }

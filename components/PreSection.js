@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import PreCard from '@/components/PreCard'
 import Grazing from '../app/img/maasaiherd.png'
 
 function PreSection() {
 
-    const [currentPage, setCurrentPage] = useState(1);
+
+    const [expanded, setExpanded] = useState(false);
+    const contentRef = useRef(null);
+
 
     const items = [{
         title: 'Diverse ethnic group',
@@ -39,8 +42,9 @@ function PreSection() {
     }
 
 
-
     const [displayedItems, setDisplayedItems] = useState(2);
+
+
 
     const handleShowMore = () => {
         setDisplayedItems(items.length);
@@ -48,37 +52,23 @@ function PreSection() {
 
     const handleShowLess = () => {
         setDisplayedItems(2);
+        document.getElementById('content').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+
     };
 
-    const renderCard = () => {
-        const startIndex = (currentPage - 1) * cardsPerPage;
-        const endIndex = Math.min(startIndex + cardsPerPage, totalCards);
 
-        const cardsToShow = [];
-        for (let i = startIndex; i < endIndex; i++) {
-            cardsToShow.push(
-                <article className={`w-full ${i % 2 !== 0 ? 'md:pt-40 2xl:pt-[12.1vw] md:w-[40%]' : 'md:w-[50%] '}`}>
-
-                    <PreCard
-                        order={i % 2 === 0 ? '2' : ''}
-                        title={items[i].title}
-                        desc={items[i].desc}
-                        img={items[i].img}
-                    />
-                </article>
-            );
-        }
-        return cardsToShow;
-    }
 
     return (
 
-        <>
-            <div className="section-body grid md:grid-cols-2 gap-16 ">
+        <div ref={contentRef} id="content" className="flex flex-col gap-16">
+            <div className="section-body grid gap-10 md:gap-y-20 md:grid-cols-2">
                 {items.slice(0, displayedItems).map((item, index) => (
                     <div
                         key={index}
-                        className={`w-full  ${bigSquare(index) ? 'md:bg-yellow-400 ' : ''}
+                        className={`w-full  ${bigSquare(index) ? '' : 'md:w-[85%]'} ${index % 2 !== 0 ? ' md:place-self-end md:mt-48' : ''}
                             `}
                     >
                         <PreCard
@@ -91,12 +81,12 @@ function PreSection() {
                 ))}
             </div>
             {displayedItems === 2 ? (
-                <button onClick={handleShowMore}>Show More</button>
+                <button className="button" onClick={handleShowMore}>Show More</button>
             ) : (
-                <button onClick={handleShowLess}>Show Less</button>
+                <button className="button" onClick={handleShowLess}>Show Less</button>
             )}
 
-        </>
+        </div>
 
         // <>
         //     <div className="section-body flex flex-col gap-16 md:flex-row md:justify-between md:gap-10">

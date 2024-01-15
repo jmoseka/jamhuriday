@@ -32,19 +32,13 @@ function PreSection() {
 
     const cardsPerPage = 2;
     const totalCards = 4;
-    const totalPages = Math.ceil(totalCards / cardsPerPage);
 
-    const nextPage = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1)
-        }
+
+    const bigSquare = (number) => {
+        return number % 4 === 0 || number % 4 === 3;
     }
 
-    const prevPage = () => {
-        if (currentPage > 1) {
-            setCurrentPage(currentPage - 1)
-        }
-    }
+
 
     const [displayedItems, setDisplayedItems] = useState(2);
 
@@ -80,28 +74,27 @@ function PreSection() {
     return (
 
         <>
-           <div className="section-body flex flex-col gap-16 md:flex-row md:justify-between md:gap-10">
-  {items.slice(0, displayedItems).map((item, index) => (
-    <div
-      key={index}
-      className={`w-full ${index % 2 !== 0 ? 'md:pt-40 2xl:pt-[12.1vw] md:w-[40%]' : 'md:w-[50%]'} ${
-        index % 2 !== 0 && index !== 0 ? 'md:ml-[5%]' : '' // Add margin for odd index and not the first item
-      }`}
-    >
-      <PreCard
-        order={index % 2 === 0 ? '2' : ''}
-        title={item.title}
-        desc={item.desc}
-        img={item.img}
-      />
-    </div>
-  ))}
-</div>
-{displayedItems === 2 ? (
-  <button onClick={handleShowMore}>Show More</button>
-) : (
-  <button onClick={handleShowLess}>Show Less</button>
-)}
+            <div className="section-body grid md:grid-cols-2 gap-16 ">
+                {items.slice(0, displayedItems).map((item, index) => (
+                    <div
+                        key={index}
+                        className={`w-full  ${bigSquare(index) ? 'md:bg-yellow-400 ' : ''}
+                            `}
+                    >
+                        <PreCard
+                            order={index % 2 === 0 ? '2' : ''}
+                            title={item.title}
+                            desc={item.desc}
+                            img={item.img}
+                        />
+                    </div>
+                ))}
+            </div>
+            {displayedItems === 2 ? (
+                <button onClick={handleShowMore}>Show More</button>
+            ) : (
+                <button onClick={handleShowLess}>Show Less</button>
+            )}
 
         </>
 

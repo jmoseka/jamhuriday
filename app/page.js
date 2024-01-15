@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* section resistant groups
-      Detailing information in a gazette structure stsyle
+     
       */}
 
       <div className='line'>
@@ -120,10 +120,11 @@ export default function Home() {
           <Image src={maumau} alt='mau mau troops' fill style={{ objectFit: "cover" }} />
         </div>
 
-        <div className='px-2 sm:px-[8vw] py-40 md:py-64 w-[100%] flex flex-col md:flex-row md:items-center items-start
-         justify-center gap-4 md:gap-8 xl:gap-20'>
-          <p className='uppercase text-[1.6rem] md:text-5xl xl:text-[5rem] 2xl:text-[4vw] text-start md:text-center font-semi-bold md:tracking-wider tracking-wide'>MAU MAU REBELLION</p>
-          <p className='font-light text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]  '>{mauMauText}</p>
+        <div className='h-[100vh] px-2 sm:px-[8vw] flex flex-col gap-8'>
+          <p className='uppercase pt-28 xl:pt-32 2xl:pt-[10vw]
+            text-[3.2rem] md:text-7xl lg:text-8xl 2xl:text-[7vw]
+           font-semi-bold md:tracking-normal tracking-wide'>MAU MAU </p>
+          <p className='body-text  '>{mauMauText}</p>
         </div>
 
 

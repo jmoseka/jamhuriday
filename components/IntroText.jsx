@@ -15,11 +15,11 @@ export default function IntroText({ title, subtitle, desc }) {
 
   return (
     <div className="intro w-full ">
-      <div className="h-[100%] flex flex-col gap-10 2xl:gap-28 pt-28 xl-32 2xl:pt-[10vw]">
+      <div className="h-[100%] flex flex-col gap-10 2xl:gap-28 pt-28 xl-pt-32 2xl:pt-[10vw]">
         <motion.h2
           ref={element}
           style={{ opacity: scrollYProgress }}
-          className="font-josefin text-[3rem] md:text-7xl lg:text-8xl 2xl:text-[7vw]"
+          className="font-josefin text-[3.2rem] md:text-7xl lg:text-8xl 2xl:text-[7vw]"
         >
           {words.map((word, index) => {
             const start = index / words.length;

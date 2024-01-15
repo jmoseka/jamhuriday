@@ -104,7 +104,7 @@ export default function Home() {
         <span></span>
       </div>
 
-      <section className='colonial-rule'>
+      <section className='colonial-rule '>
 
 
         <div className='px-2 sm:px-[8vw]'>
@@ -116,7 +116,7 @@ export default function Home() {
         </div>
 
 
-        <div className={`relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
+        <div className={`relative  ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
           <Image src={maumau} alt='mau mau troops' fill style={{ objectFit: "cover" }} />
         </div>
 

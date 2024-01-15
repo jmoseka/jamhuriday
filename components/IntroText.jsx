@@ -15,7 +15,7 @@ export default function IntroText({ title, subtitle, desc }) {
 
   return (
     <div className="intro w-full ">
-      <div className="h-[100%] flex flex-col gap-10 2xl:gap-28">
+      <div className="h-[100%] flex flex-col gap-10 2xl:gap-28 pt-28 xl-32 2xl:pt-[10vw]">
         <motion.h2
           ref={element}
           style={{ opacity: scrollYProgress }}
@@ -33,7 +33,9 @@ export default function IntroText({ title, subtitle, desc }) {
         </motion.h2>
 
         <div className="flex flex-col gap-2 2xl:gap-16">
-          <h3 className="text-subtitle text-xl md:text-2xl 2xl:text-[1.8vw]">{subtitle}</h3>
+          <h3 className="text-subtitle text-xl md:text-2xl 2xl:text-[1.8vw]">
+            {subtitle}
+          </h3>
           <p className="body-text">{desc}</p>
         </div>
       </div>

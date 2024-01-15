@@ -8,18 +8,18 @@ export default function IntroText({ title, subtitle, desc }) {
     target: element,
     // start, 0.9 - 90% of the window when the opacity style start taking effect
     // at 0.35 at 35% opacity is 1
-    offset: ["start end", "start 0.25"],
+    offset: ["start end", "start 0.15"],
   });
 
   const words = title.split(" ");
 
   return (
-    <div className="intro w-full pt-[27vh]">
-      <div className="h-[100%] flex flex-col gap-10 2xl:gap-28">
+    <div className="intro w-full ">
+      <div className="h-[100%] flex flex-col gap-10 2xl:gap-28 pt-28 xl-pt-32 2xl:pt-[10vw]">
         <motion.h2
           ref={element}
           style={{ opacity: scrollYProgress }}
-          className="font-josefin text-[3rem] md:text-7xl lg:text-8xl 2xl:text-[7vw]"
+          className="font-josefin text-[3.2rem] md:text-7xl lg:text-8xl 2xl:text-[7vw]"
         >
           {words.map((word, index) => {
             const start = index / words.length;
@@ -33,8 +33,10 @@ export default function IntroText({ title, subtitle, desc }) {
         </motion.h2>
 
         <div className="flex flex-col gap-2 2xl:gap-16">
-          <h3 className="text-subtitle text-xl md:text-2xl 2xl:text-[1.8vw]">{subtitle}</h3>
-          <p className="font-light md:w-[80%] text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]">{desc}</p>
+          <h3 className="text-subtitle text-xl md:text-2xl 2xl:text-[1.8vw]">
+            {subtitle}
+          </h3>
+          <p className="body-text">{desc}</p>
         </div>
       </div>
     </div>

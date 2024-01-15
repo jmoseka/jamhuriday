@@ -66,7 +66,7 @@ export default function Home() {
     <main className="flex min-h-screen bg-bgcolor
     flex-col items-center justify-between font-urban">
 
-      <section id='home' className="hero-section h-[100vh] w-full px-2">
+      <section id='home' className="hero-section h-[100vh] w-full px-2 pb-10">
         <div className='hero w-full pt-[35vh]
           text-center '>
           <h1 className='uppercase text-4xl md:text-5xl xl:text-7xl 2xl:text-[5vw]'>In the shadows of freedom</h1>
@@ -83,7 +83,7 @@ export default function Home() {
         <IntroText
           title="1000BC - 19TH CE"
           subtitle="Pre-colonial era"
-          desc="This timeline explores the rich and diverse history of the region that is now Kenya before the arrival of Europeans. It delves into the various ethnic groups, their cultures, and the way of life before colonialism."
+          desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
         />
 
         <div className='sub-section'>
@@ -97,14 +97,14 @@ export default function Home() {
       </section>
 
       {/* section resistant groups
-      Detailing information in a gazette structure stsyle
+     
       */}
 
       <div className='line'>
         <span></span>
       </div>
 
-      <section className='colonial-rule'>
+      <section >
 
 
         <div className='px-2 sm:px-[8vw]'>
@@ -116,14 +116,15 @@ export default function Home() {
         </div>
 
 
-        <div className={`relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
+        <div className={`relative  ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
           <Image src={maumau} alt='mau mau troops' fill style={{ objectFit: "cover" }} />
         </div>
 
-        <div className='px-2 sm:px-[8vw] py-40 md:py-64 w-[100%] flex flex-col md:flex-row md:items-center items-start
-         justify-center gap-4 md:gap-8 xl:gap-20'>
-          <p className='uppercase text-[1.6rem] md:text-5xl xl:text-[5rem] 2xl:text-[4vw] text-start md:text-center font-semi-bold md:tracking-wider tracking-wide'>MAU MAU REBELLION</p>
-          <p className='font-light text-[0.93rem] md:text-base 2xl:text-[1.1vw]  2xl:leading-[1.4vw]  '>{mauMauText}</p>
+        <div className='h-[100vh] px-2 sm:px-[8vw] flex flex-col gap-8'>
+          <p className='uppercase pt-28 xl:pt-32 2xl:pt-[10vw]
+            text-[3.2rem] md:text-7xl lg:text-8xl 2xl:text-[7vw]
+           font-semi-bold md:tracking-normal tracking-wide'>MAU MAU </p>
+          <p className='body-text  '>{mauMauText}</p>
         </div>
 
 

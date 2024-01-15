@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import PreCard from '@/components/PreCard'
 import Grazing from '../app/img/maasaiherd.png'
 
 function PreSection() {
 
-    const [currentPage, setCurrentPage] = useState(1);
+
+    const [expanded, setExpanded] = useState(false);
+    const contentRef = useRef(null);
+
 
     const items = [{
         title: 'Diverse ethnic group',
@@ -32,63 +35,81 @@ function PreSection() {
 
     const cardsPerPage = 2;
     const totalCards = 4;
-    const totalPages = Math.ceil(totalCards / cardsPerPage);
 
-    const nextPage = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1)
-        }
+
+    const bigSquare = (number) => {
+        return number % 4 === 0 || number % 4 === 3;
     }
 
-    const prevPage = () => {
-        if (currentPage > 1) {
-            setCurrentPage(currentPage - 1)
-        }
-    }
 
-    const renderCard = () => {
-        const startIndex = (currentPage - 1) * cardsPerPage;
-        const endIndex = Math.min(startIndex + cardsPerPage, totalCards);
+    const [displayedItems, setDisplayedItems] = useState(2);
 
-        const cardsToShow = [];
-        for (let i = startIndex; i < endIndex; i++) {
-            cardsToShow.push(
-                <article className={`w-full ${i % 2 !== 0 ? 'md:pt-40 2xl:pt-[12.1vw] md:w-[40%]' : 'md:w-[50%] '}`}>
 
-                    <PreCard
-                        order={i % 2 === 0 ? '2' : ''}
-                        title={items[i].title}
-                        desc={items[i].desc}
-                        img={items[i].img}
-                    />
-                </article>
-            );
-        }
-        return cardsToShow;
-    }
+
+    const handleShowMore = () => {
+        setDisplayedItems(items.length);
+    };
+
+    const handleShowLess = () => {
+        setDisplayedItems(2);
+        document.getElementById('content').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+
+    };
+
+
 
     return (
-        <>
-            <div className="section-body flex flex-col gap-20 md:flex-row md:justify-between md:gap-10">
-                {renderCard()}
+
+        <div ref={contentRef} id="content" className="flex flex-col gap-16 md:gap-24 xl:gap-44">
+
+            <div className="section-body grid gap-10 md:gap-y-20 md:grid-cols-2">
+                {items.slice(0, displayedItems).map((item, index) => (
+                    <div
+                        key={index}
+                        className={`w-full  ${bigSquare(index) ? '' : 'md:w-[85%]'} ${index % 2 !== 0 ? ' md:place-self-end md:mt-48' : ''}
+                            `}
+                    >
+                        <PreCard
+                            order={index % 2 === 0 ? '2' : ''}
+                            title={item.title}
+                            desc={item.desc}
+                            img={item.img}
+                        />
+                    </div>
+                ))}
             </div>
+            {displayedItems === 2 ? (
+                <button className="button" onClick={handleShowMore}>Show More</button>
+            ) : (
+                <button className="button" onClick={handleShowLess}>Show Less</button>
+            )}
 
-            <div className={`pt-12 md:pt-24  flex justify-center`}>
+        </div>
 
-                {
-                    currentPage === 1 ?
-                        <div className='w-fit'>
-                            <button onClick={() => nextPage()} type='button' className='button'>NEXT</button>
-                        </div>
-                        :
-                        <div>
-                            <button onClick={() => prevPage()} type='button' className='button'>PREV</button>
-                        </div>
-                }
+        // <>
+        //     <div className="section-body flex flex-col gap-16 md:flex-row md:justify-between md:gap-10">
+        //         {renderCard()}
+        //     </div>
+
+        //     <div className={`pt-12 md:pt-24  flex justify-center`}>
+
+        //         {
+        //             currentPage === 1 ?
+        //                 <div className='w-fit'>
+        //                     <button onClick={() => nextPage()} type='button' className='button'>VIEW MORE</button>
+        //                 </div>
+        //                 :
+        //                 <div>
+        //                     <button onClick={() => prevPage()} type='button' className='button'>VIEW LESS</button>
+        //                 </div>
+        //         }
 
 
-            </div>
-        </>
+        //     </div>
+        // </>
     )
 }
 

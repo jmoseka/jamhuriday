@@ -124,7 +124,9 @@ figcaption {
 }
 
 .button {
-  @apply py-2 px-4 border rounded-lg text-sm xl:text-[1vw] text-white w-fit;
+  @apply py-2 px-4 2xl:py-[1vw] 2xl:px-[1vw]
+   border rounded-lg 2xl:rounded-xl
+    text-sm md:text-lg xl:text-[1.2vw] text-white w-fit;
 }
 
 .footer-links {

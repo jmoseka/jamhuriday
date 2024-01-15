@@ -66,7 +66,7 @@ export default function Home() {
     <main className="flex min-h-screen bg-bgcolor
     flex-col items-center justify-between font-urban">
 
-      <section id='home' className="hero-section h-[100vh] w-full px-2">
+      <section id='home' className="hero-section h-[100vh] w-full px-2 pb-10">
         <div className='hero w-full pt-[35vh]
           text-center '>
           <h1 className='uppercase text-4xl md:text-5xl xl:text-7xl 2xl:text-[5vw]'>In the shadows of freedom</h1>
@@ -104,7 +104,7 @@ export default function Home() {
         <span></span>
       </div>
 
-      <section className='colonial-rule '>
+      <section >
 
 
         <div className='px-2 sm:px-[8vw]'>

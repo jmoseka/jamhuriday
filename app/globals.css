@@ -134,3 +134,7 @@ figcaption {
 .self-end {
   align-self: end;
 }
+
+.caption {
+  @apply  pt-1 text-[0.7rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw];
+}

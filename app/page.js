@@ -125,17 +125,97 @@ export default function Home() {
 
         <div className='pb-20 px-2 sm:px-[8vw] flex flex-col gap-8'>
           <p className='flex items-center justify-center text-center h-[70vh] md:h-[100vh] uppercase 
-            text-6xl md:text-9xl lg:text-9xl 2xl:text-[7vw]
+            text-6xl md:text-[10rem] 2xl:text-[10vw]
            font-semi-bold md:tracking-normal tracking-wide'>MAU MAU </p>
           <p className='body-text  '>{mauMauText}</p>
         </div>
+      </section>
 
 
+      {/* line divide  */}
 
+      <div className='line'>
+        <span className=''></span>
+      </div>
+
+      <section id='path-to-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50 '>
+
+        <IntroText
+          title="1960 - 1962"
+          subtitle="Path To Independence"
+          desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
+        />
+
+        <div className='flex flex-col gap-3 md:flex-row pt-10'>
+          <figure>
+            <div className='relative h-[50vh] w-[100%]'>
+              <Image src={jomospeak} alt="jomo kenyatta speaking at lancaster" fill style={{ objectFit: "cover" }} />
+            </div>
+            <figcaption className='caption'>Mr Jomo Kenyatta (left), President of the Kenya African National Union, and Mr Tom Mboya (check suit) are pictured at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
+
+          </figure>
+
+          <figure>
+            <div className='relative h-[50vh] w-[100%]'>
+              <Image src={jomotom} alt="jomo kenyatta speaking at lancaster" fill style={{ objectFit: "cover" }} />
+            </div>
+            <figcaption className='caption'>Mr Jomo Kanyatta, President of the Kenya African National Union, speaking at the closing ceremony of the Kenya Constitutional Conference at Lancaster House, London.</figcaption>
+
+          </figure>
+
+        </div>
       </section>
 
 
 
+      <div className='line'>
+        <span></span>
+      </div>
+
+
+      <section id='jamhuri' className='px-2 sm:px-[8vw] pb-32 md:pb-50 '>
+        <IntroText
+          title="December 12, 1964"
+          subtitle="Jamhuri Day Declaration"
+          desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
+        />
+
+        <div className='pt-20'>
+          <div className='w-full gallery grid grid-cols-3 gap-10'>
+
+
+            <div className='col-span-3'>
+              <figure className='w-full flex flex-col'>
+                <div className='relative  w-[100%] h-[35vh] sm:h-[65vh] md:h-[75vh]'>
+                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} fill style={{ objectFit: "contain" }}
+                  />
+
+                </div>
+
+                <figcaption className='caption'>
+                  {caption}
+                </figcaption>
+
+              </figure>
+            </div>
+
+            <div className=" flex col-span-3 gap-2">
+              {smallimages.map((image) => (
+                <button key={image.id} className="small-image flex-1" onClick={() => handleClick(image)}>
+                  <div className='relative w-full h-[20vh] md:h-[25vh] xl:h-[35vh]' >
+                    <Image fill style={{ objectFit: "cover" }} src={image.src} alt={image.desc} />
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div className='line'>
+        <span></span>
+      </div>
 
     </main>
   )

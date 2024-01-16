@@ -180,14 +180,14 @@ export default function Home() {
           desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
         />
 
-        <div className='pt-20'>
+        <div className='pt-20 md:pt-0'>
           <div className='w-full gallery grid grid-cols-3 gap-10'>
 
 
             <div className='col-span-3'>
               <figure className='w-full flex flex-col'>
-                <div className='relative  w-[100%] h-[35vh] sm:h-[65vh] md:h-[75vh]'>
-                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} fill style={{ objectFit: "contain" }}
+                <div className='relative w-[100%] h-[35vh] sm:h-[65vh] md:h-[75vh] 2xl:h-[100vh]'>
+                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} style={{ objectFit: "contain" }}
                   />
 
                 </div>
@@ -215,7 +215,55 @@ export default function Home() {
 
       <div className='line'>
         <span></span>
-      </div>
+      </div>     
+      
+      
+       <section id='post-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50'  >
+
+        <IntroText
+          title="Post-Independence Era"
+          subtitle="A sorveign country"
+          desc="Following its independence from British colonial rule on December 12, 1963, Kenya embarked on a journey of nation-building and self-determination. However, the post-independence era was not without challenges. Political transitions, socio-economic disparities, ethnic tensions, and struggles for democratic governance characterized different phases of Kenya's evolution. Over the decades, the country underwent significant changes, shaping its identity and paving the way for the Kenya we see today."
+        />
+
+        <div className='pt-16 flex flex-col gap-12 md:gap-32 2xl:gap-[14vh] '>
+
+          <PresentCard
+            title='Political Evolution'
+            img={moi}
+            desc='In the 1980s and 1990s, Kenya saw influential leaders shaping governance, leading to political shifts, transitions, and constitutional reforms. Pro-democracy movements emerged, paving the way for Kenyas transition from a single-party to a multi-party system, fundamentally altering the nations political landscape.'
+
+
+          />
+          <PresentCard
+            order={2}
+            title='Economic Growth and Challenges'
+            img={agri}
+            desc='In the 2000s, Kenya focused on economic policies, industrialization, and development strategies to spur growth. However, challenges arose in achieving sustainable economic progress. Efforts were made to reduce poverty, promote rural development, and implement social welfare programs to address socio-economic disparities.
+  '
+          />
+
+          <PresentCard
+            title='Constitutional Reforms and Modernization'
+            img={kibaki}
+            desc='The 2010s saw Kenya undergo constitutional reforms, reshaping governance. Embracing technological advancements, the nation witnessed improvements in various sectors. Initiatives targeted education, healthcare, and infrastructure development, reflecting a commitment to modernization and progress.'
+          />
+
+          <PresentCard
+            order={2}
+            img={protest}
+            title='Challenges and Sociopolitical Developments'
+            desc='Addressing corruption, ethnic tensions, and challenges to national unity became focal points in the 2010s. Political landscapes underwent changes, with elections and power transitions influencing governance. Social movements, activism, and civil society engagement played key roles in advocating for reforms.
+  '
+          />
+
+        </div>
+
+
+      </section>
+
+
+
 
     </main>
   )

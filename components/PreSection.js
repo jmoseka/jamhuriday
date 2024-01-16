@@ -6,10 +6,6 @@ import Grazing from '../app/img/maasaiherd.png'
 function PreSection() {
 
 
-    const [expanded, setExpanded] = useState(false);
-    const contentRef = useRef(null);
-
-
     const items = [{
         title: 'Diverse ethnic group',
         desc: 'Kenya was home to numerous ethnic groups such as the Kikuyu, Luo, Luhya, Kalenjin, Maasai, and others, each with its own language, customs, and social organization.',
@@ -63,13 +59,13 @@ function PreSection() {
 
     return (
 
-        <div ref={contentRef}  className="flex flex-col gap-16 md:gap-24 xl:gap-44">
+        <div className="flex flex-col gap-16 md:gap-24 xl:gap-44">
 
             <div className="section-body grid gap-10 md:gap-y-20 md:grid-cols-2">
                 {items.slice(0, displayedItems).map((item, index) => (
                     <div
                         key={index}
-                        id={`${index === 1 ? 'content' : ''}`}
+
                         className={`w-full  ${bigSquare(index) ? '' : 'md:w-[85%]'} ${index % 2 !== 0 ? ' md:place-self-end md:mt-48' : ''}
                             `}
                     >
@@ -82,12 +78,16 @@ function PreSection() {
                     </div>
                 ))}
             </div>
-            
-            {displayedItems === 2 ? (
-                <button className="button" onClick={handleShowMore}>Show More</button>
-            ) : (
-                <button className="button" onClick={handleShowLess}>Show Less</button>
-            )}
+
+            <div id='content'>
+                {displayedItems === 2 ? (
+                    <button className="button" onClick={handleShowMore}>Show More</button>
+                ) : (
+                    <button className="button" onClick={handleShowLess}>Show Less</button>
+                )}
+            </div>
+
+
 
         </div>
 

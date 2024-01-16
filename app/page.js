@@ -91,7 +91,7 @@ export default function Home() {
           desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
         />
 
-        <div className='sub-section'>
+        <div className='sub-section pt-20 md:pt-10'>
 
           <PreSection />
 
@@ -103,6 +103,36 @@ export default function Home() {
       <div className='line'>
         <span className=''></span>
       </div>
+
+
+      <section>
+
+
+        <div className='px-2 sm:px-[8vw]'>
+          <IntroText
+            title="1900 - 1963"
+            subtitle="Colonial Rule and Resistance Movements"
+            desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
+          />
+        </div>
+
+
+        <div className='pt-20 md:pt-0'>
+          <div className={`relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
+            <Image src={maumau} alt='mau mau troops' fill style={{ objectFit: "cover" }} />
+          </div>
+        </div>
+
+        <div className='pb-20 px-2 sm:px-[8vw] flex flex-col gap-8'>
+          <p className='flex items-center justify-center text-center h-[70vh] md:h-[100vh] uppercase 
+            text-6xl md:text-9xl lg:text-9xl 2xl:text-[7vw]
+           font-semi-bold md:tracking-normal tracking-wide'>MAU MAU </p>
+          <p className='body-text  '>{mauMauText}</p>
+        </div>
+
+
+
+      </section>
 
 
 

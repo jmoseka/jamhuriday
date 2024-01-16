@@ -50,7 +50,6 @@ figure {
 }
 
 .sub-section {
-  @apply py-20;
   display: table;
   background-attachment: fixed;
 }

@@ -81,6 +81,7 @@ function PreSection() {
                     </div>
                 ))}
             </div>
+            
             {displayedItems === 2 ? (
                 <button className="button" onClick={handleShowMore}>Show More</button>
             ) : (

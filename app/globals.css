@@ -51,7 +51,6 @@ figure {
 
 .sub-section {
   @apply py-20;
-  height: 100vh;
   display: table;
   background-attachment: fixed;
 }
@@ -61,7 +60,7 @@ figure {
 }
 
 .line span {
-  @apply block w-full h-[0.08px] bg-[#333333] xl:h-[1px];
+  @apply block w-full h-[1px] bg-[#333333] xl:h-[1px];
 }
 
 /* Precolonial section style*/

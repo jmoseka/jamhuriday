@@ -63,12 +63,13 @@ function PreSection() {
 
     return (
 
-        <div ref={contentRef} id="content" className="flex flex-col gap-16 md:gap-24 xl:gap-44">
+        <div ref={contentRef}  className="flex flex-col gap-16 md:gap-24 xl:gap-44">
 
             <div className="section-body grid gap-10 md:gap-y-20 md:grid-cols-2">
                 {items.slice(0, displayedItems).map((item, index) => (
                     <div
                         key={index}
+                        id={`${index === 1 ? 'content' : ''}`}
                         className={`w-full  ${bigSquare(index) ? '' : 'md:w-[85%]'} ${index % 2 !== 0 ? ' md:place-self-end md:mt-48' : ''}
                             `}
                     >

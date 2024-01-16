@@ -83,7 +83,7 @@ export default function Home() {
 
       {/* Precolonial section */}
 
-      <section id='pre-colonial' className='px-2 sm:px-[8vw] flex flex-col'>
+      <section id='pre-colonial' className='px-2 sm:px-[8vw] flex flex-col pb-10'>
 
         <IntroText
           title="1000BC - 19TH CE"
@@ -96,10 +96,13 @@ export default function Home() {
           <PreSection />
 
         </div>
-
-
-
       </section>
+
+      {/* line divide  */}
+
+      <div className='line'>
+        <span className=''></span>
+      </div>
 
 
 

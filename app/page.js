@@ -111,7 +111,7 @@ export default function Home() {
           <IntroText
             title="1900 - 1963"
             subtitle="Colonial Rule and Resistance Movements"
-            desc="This timeline highlights the period of British colonial rule, which lasted from the late 19th century until Kenya's independence in 1963. It includes the struggles and resistance against colonial oppression and exploitation."
+            desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
           />
         </div>
 
@@ -144,7 +144,7 @@ export default function Home() {
         <IntroText
           title="1960 - 1962"
           subtitle="Path To Independence"
-          desc="This timeline covers the series of events, negotiations, and political developments that ultimately led to Kenya's independence. It includes key figures like Jomo Kenyatta and the Lancaster House Conference of 1960-1962."
+          desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
         />
 
         <div className='flex flex-col gap-3 md:flex-row pt-10'>
@@ -174,7 +174,7 @@ export default function Home() {
         <IntroText
           title="December 12, 1964"
           subtitle="Jamhuri Day Declaration"
-          desc="This timeline celebrates the day the Kenyan flag was raised, and the country's first president, Jomo Kenyatta, took office. These timelines provide a historical context for the significance of Jamhuri Day and help Kenyans reflect on the journey toward self-governance and the birth of their republic."
+          desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
         />
 
         <div>

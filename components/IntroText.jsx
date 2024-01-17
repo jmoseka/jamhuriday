@@ -32,7 +32,7 @@ export default function IntroText({ title, subtitle, desc }) {
           })}
         </motion.h2>
 
-        <div className="flex flex-col gap-2 2xl:gap-16">
+        <div className="flex flex-col gap-2 2xl:gap-10">
           <h3 className="text-subtitle text-xl md:text-2xl 2xl:text-[1.8vw]">
             {subtitle}
           </h3>

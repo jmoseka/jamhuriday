@@ -59,14 +59,14 @@ function PreSection() {
 
     return (
 
-        <div className="flex flex-col gap-16 md:gap-24 xl:gap-44">
+        <div>
 
-            <div className="section-body grid gap-10 md:gap-y-20 md:grid-cols-2">
+            <div  id='content' className="section-body grid gap-y-12  md:gap-y-20 md:grid-cols-2 ">
                 {items.slice(0, displayedItems).map((item, index) => (
                     <div
                         key={index}
 
-                        className={`w-full  ${bigSquare(index) ? '' : 'md:w-[85%]'} ${index % 2 !== 0 ? ' md:place-self-end md:mt-48' : ''}
+                        className={`w-full  ${bigSquare(index) ? '' : 'md:w-[84%]'} ${index % 2 !== 0 ? ' md:place-self-end md:mt-48' : ''}
                             `}
                     >
                         <PreCard
@@ -79,7 +79,7 @@ function PreSection() {
                 ))}
             </div>
 
-            <div id='content'>
+            <div className="py-12">
                 {displayedItems === 2 ? (
                     <button className="button" onClick={handleShowMore}>Show More</button>
                 ) : (

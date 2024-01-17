@@ -190,7 +190,7 @@ export default function Home() {
                   <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} fill style={{ objectFit: "contain" }}
                   />
                 </div>
-                <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>
+                <figcaption className='caption'>
                   {caption}
                 </figcaption>
               </figure>
@@ -233,7 +233,7 @@ export default function Home() {
 
           />
           <PresentCard
-            order={2}
+            order={'2'}
             title='Economic Growth and Challenges'
             img={agri}
             desc='In the 2000s, Kenya focused on economic policies, industrialization, and development strategies to spur growth. However, challenges arose in achieving sustainable economic progress. Efforts were made to reduce poverty, promote rural development, and implement social welfare programs to address socio-economic disparities.

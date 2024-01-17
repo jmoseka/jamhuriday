@@ -12,7 +12,7 @@ export default function PreCard({ title, desc, img, align, order }) {
   });
 
   return (
-    <div className="flex flex-col gap-4 2xl:gap-[2.8vw] ">
+    <div className="flex flex-col gap-3 2xl:gap-[2.8vw] ">
       <h2 className={`heading-two textTitle`}>
         {" "}
         {title}

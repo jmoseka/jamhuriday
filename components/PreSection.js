@@ -2,6 +2,9 @@ import { useRef, useState } from "react";
 
 import PreCard from '@/components/PreCard'
 import Grazing from '../app/img/maasaiherd.png'
+import ethnic from '../app/img/pre/ethnic.jpg'
+import leader from '../app/img/pre/leader.jpg'
+import religion from '../app/img/pre/religion.jpg'
 
 function PreSection() {
 
@@ -9,12 +12,12 @@ function PreSection() {
     const items = [{
         title: 'Diverse ethnic group',
         desc: 'Kenya was home to numerous ethnic groups such as the Kikuyu, Luo, Luhya, Kalenjin, Maasai, and others, each with its own language, customs, and social organization.',
-        img: Grazing
+        img: ethnic
     },
     {
         title: 'Political Organization',
         desc: 'Political systems varied, ranging from centralized monarchies to decentralized systems led by councils of elders. Some societies had chiefs or leaders who held authority, often based on lineage or prowess in war.',
-        img: Grazing
+        img: leader
     },
     {
         title: 'Economic Activities',
@@ -24,7 +27,7 @@ function PreSection() {
     {
         title: 'Religious Beliefs',
         desc: 'Traditional African religions were prevalent, characterized by beliefs in spirits, ancestor worship, and the presence of supernatural forces in nature. Religious practices varied among different ethnic groups.',
-        img: Grazing
+        img: religion
     },
 
     ]
@@ -61,7 +64,7 @@ function PreSection() {
 
         <div>
 
-            <div  id='content' className="section-body grid gap-y-12  md:gap-y-20 md:grid-cols-2 ">
+            <div id='content' className="section-body grid gap-y-12  md:gap-y-20 md:grid-cols-2 ">
                 {items.slice(0, displayedItems).map((item, index) => (
                     <div
                         key={index}

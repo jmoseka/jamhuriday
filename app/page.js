@@ -233,7 +233,7 @@ export default function Home() {
 
           />
           <PresentCard
-            order={'2'}
+            order={2}
             title='Economic Growth and Challenges'
             img={agri}
             desc='In the 2000s, Kenya focused on economic policies, industrialization, and development strategies to spur growth. However, challenges arose in achieving sustainable economic progress. Efforts were made to reduce poverty, promote rural development, and implement social welfare programs to address socio-economic disparities.
@@ -258,6 +258,49 @@ export default function Home() {
 
 
       </section>
+
+
+
+
+
+      <footer className='w-full  '>
+        <div className='line'>
+          <span className=''></span>
+        </div>
+
+        <div className=' px-2 sm:px-[8vw] py-10 md:py-10'>
+
+          <div className='flex flex-col gap-6 md:gap-32 text-subtitle md:flex-row'>
+
+
+            <div>
+              <h2 className='text-xl font-semibold'>Useful Links</h2>
+              <ul className='text-[0.88rem] pt-4'>
+                <li><a className='cursor-pointer hover:textColor' href='#home'>Home</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#pre-colonial'>Pre-colonial era</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#colonial-rule'>Colonial rule and resistance groups</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#path-to-independence'>Path to Independence</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#jamhuri'>The Jamhuri Day</a></li>
+                <li><a className='cursor-pointer hover:textColor' href='#post-independence'>Present day</a></li>
+              </ul>
+
+            </div>
+
+            <div className=''>
+              <h2 className='text-xl font-semibold'>Social Links</h2>
+              <ul className='pt-4 flex gap-3'>
+                <a className='footer-links'>
+                  <FiGithub />
+                </a>
+                <a className='footer-links'>
+                  <FaXTwitter />
+                </a>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </footer>
 
 
 

@@ -1,15 +1,17 @@
 import Image from "next/image";
 
 export default function PresentCard({ title, desc, img, order }) {
-  const n = 2;
+  const n = "md:order";
   var val = "";
   if (order) {
     val = `md:order-${order}`;
   }
   return (
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid md:grid-cols-2 gap-8">
       <div
-        className={`relative h-[16rem] lg:h-[20rem] xl:h-[25rem] 2xl:h-[25vw] ${order ? `md:order-${order}` : ''}`}
+        className={`relative h-[15rem] sm:h-[20rem] lg:h-[20rem] xl:h-[25rem] 2xl:h-[25vw] ${
+          order === 2 ? "md:order-2 " : "" }
+        `}
       >
         <Image src={img} alt={img} fill fillstyle={{ objectFit: "cover" }} />
       </div>

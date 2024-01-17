@@ -185,17 +185,14 @@ export default function Home() {
 
 
             <div className='col-span-3'>
-              <figure className='w-full flex flex-col'>
-                <div className='relative w-[100%] h-[35vh] sm:h-[65vh] md:h-[75vh] 2xl:h-[100vh]'>
-                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} style={{ objectFit: "contain" }}
+              <figure className='w-full flex flex-col items-center'>
+                <div className='relative w-[100%] h-[45vh] sm:h-[65vh] md:h-[75vh]'>
+                  <Image className='text-center mx-auto' src={selectedImage.src} alt={caption} fill style={{ objectFit: "contain" }}
                   />
-
                 </div>
-
-                <figcaption className='caption'>
+                <figcaption className='text-[0.65rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw]'>
                   {caption}
                 </figcaption>
-
               </figure>
             </div>
 
@@ -215,10 +212,10 @@ export default function Home() {
 
       <div className='line'>
         <span></span>
-      </div>     
-      
-      
-       <section id='post-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50'  >
+      </div>
+
+
+      <section id='post-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50'  >
 
         <IntroText
           title="Post-Independence Era"

@@ -16,7 +16,8 @@ import moi from '../app/img/postindependence/moi.jpg'
 import protest from '../app/img/postindependence/protest.jpg'
 import kibaki from '../app/img/postindependence/kibaki.jpg'
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useScroll, motion, useTransform } from 'framer-motion';
 
 
 export default function Home() {
@@ -38,6 +39,22 @@ export default function Home() {
   const [caption, setCaption] = useState(images[0].alt);
   const smallimages = images.slice(1, 4);
   const [windowWidth, setWindowWidth] = useState(null);
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll(
+    {
+      target: ref,
+      offset: ["-0.7 1", "1.33 1"]
+    }
+  )
+
+  const scaleProgress = useTransform(
+    scrollYProgress, [0, 1], [0.7, 1]
+  )
+
+  const opacityProgress = useTransform(
+    scrollYProgress, [0, 1], [0.9, 1]
+  )
 
   const handleWindowResize = () => {
     setWindowWidth(window.innerWidth);
@@ -62,6 +79,8 @@ export default function Home() {
     });
   };
 
+
+
   return (
     <main className="flex min-h-screen bg-bgcolor
     flex-col items-center justify-between font-urban  w-full">
@@ -83,7 +102,14 @@ export default function Home() {
 
       {/* Precolonial section */}
 
-      <section id='pre-colonial' className='px-2 sm:px-[8vw] flex flex-col pb-10'>
+      <motion.section ref={ref}
+        style={{
+          scale: scaleProgress,
+          opacity: opacityProgress
+        }
+        }
+        id='pre-colonial'
+        className='px-2 sm:px-[8vw] flex flex-col pb-10'>
 
         <IntroText
           title="1000BC - 19TH CE"
@@ -96,7 +122,7 @@ export default function Home() {
           <PreSection />
 
         </div>
-      </section>
+      </motion.section>
 
       {/* line divide  */}
 
@@ -289,10 +315,10 @@ export default function Home() {
             <div className=''>
               <h2 className='text-xl 2xl:text-[1.5vw] font-semibold'>Social Links</h2>
               <ul className='pt-4 2xl:pt-[1.4vw] flex gap-3 2xl:gap-[1vw]'>
-                <a className='footer-links'  href="https://github.com/jmoseka/jamhuriday" target="_blank">
+                <a className='footer-links' href="https://github.com/jmoseka/jamhuriday" target="_blank">
                   <FiGithub />
                 </a>
-                <a className='footer-links'  href="https://twitter.com/misaucecode" target="_blank">
+                <a className='footer-links' href="https://twitter.com/misaucecode" target="_blank">
                   <FaXTwitter />
                 </a>
               </ul>

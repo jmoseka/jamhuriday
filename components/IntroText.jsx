@@ -19,7 +19,7 @@ export default function IntroText({ title, subtitle, desc }) {
         <motion.h2
           ref={element}
           style={{ opacity: scrollYProgress }}
-          className="font-josefin text-[3.2rem] md:text-7xl lg:text-8xl 2xl:text-[7vw]"
+          className="text-light font-josefin text-[2.5rem] md:text-7xl lg:text-8xl 2xl:text-[7vw]"
         >
           {words.map((word, index) => {
             const start = index / words.length;
@@ -32,7 +32,7 @@ export default function IntroText({ title, subtitle, desc }) {
           })}
         </motion.h2>
 
-        <div className="flex flex-col gap-2 2xl:gap-16">
+        <div className="flex flex-col gap-2 2xl:gap-10">
           <h3 className="text-subtitle text-xl md:text-2xl 2xl:text-[1.8vw]">
             {subtitle}
           </h3>

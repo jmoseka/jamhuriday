@@ -105,14 +105,14 @@ export default function Home() {
       </div>
 
 
-      <section>
+      <section id='colonial-rule'>
 
 
         <div className='px-2 sm:px-[8vw]'>
           <IntroText
             title="1900 - 1963"
             subtitle="Colonial Rule and Resistance Movements"
-            desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
+            desc="From 1900 to 1963, Kenya experienced a transformative period marked by colonial rule and resistance movements. British colonial influence intensified, leading to economic exploitation, land dispossession, and significant social changes. The construction of the Uganda Railway and the establishment of settler farms disrupted traditional land-use patterns. Indigenous communities, particularly the Kikuyu, responded with resistance movements, notably the Mau Mau Uprising (1952-1960)."
           />
         </div>
 
@@ -143,7 +143,7 @@ export default function Home() {
         <IntroText
           title="1960 - 1962"
           subtitle="Path To Independence"
-          desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
+          desc=", Kenya embarked on a decisive journey towards independence from British colonial rule. This phase witnessed intense political negotiations and activism, with leaders like Jomo Kenyatta playing pivotal roles. The momentum for self-rule gained traction, leading to constitutional talks and the formulation of a pathway to independence. Despite challenges and tensions, Kenya successfully navigated the complexities of the independence process. On December 12, 1963, the nation achieved sovereignty, marking a historic moment in its struggle for self-determination. Jomo Kenyatta became Kenya's first Prime Minister, symbolizing the end of colonial rule and the beginning of a new era for the nation."
         />
 
         <div className='flex flex-col gap-3 md:flex-row pt-10'>
@@ -218,12 +218,12 @@ export default function Home() {
       <section id='post-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50'  >
 
         <IntroText
-          title="Post-Independence Era"
+          title="Post - Independence"
           subtitle="A sorveign country"
           desc="Following its independence from British colonial rule on December 12, 1963, Kenya embarked on a journey of nation-building and self-determination. However, the post-independence era was not without challenges. Political transitions, socio-economic disparities, ethnic tensions, and struggles for democratic governance characterized different phases of Kenya's evolution. Over the decades, the country underwent significant changes, shaping its identity and paving the way for the Kenya we see today."
         />
 
-        <div className='pt-16 flex flex-col gap-12 md:gap-32 2xl:gap-[14vh] '>
+        <div className='pt-16 flex flex-col  gap-20 md:gap-32 2xl:gap-[14vh] '>
 
           <PresentCard
             title='Political Evolution'
@@ -268,14 +268,14 @@ export default function Home() {
           <span className=''></span>
         </div>
 
-        <div className=' px-2 sm:px-[8vw] py-10 md:py-10'>
+        <div className='px-2 sm:px-[8vw] py-10 md:2xl:py-[5vw]'>
 
-          <div className='flex flex-col gap-6 md:gap-32 text-subtitle md:flex-row'>
+          <div className='flex flex-col gap-6 md:gap-32 2xl:gap-[9vw] text-subtitle md:flex-row'>
 
 
             <div>
-              <h2 className='text-xl font-semibold'>Useful Links</h2>
-              <ul className='text-[0.88rem] pt-4'>
+              <h2 className='text-xl 2xl:text-[1.5vw] font-semibold'>Useful Links</h2>
+              <ul className='text-[0.88rem] 2xl:text-[01vw] pt-4 2xl:pt-[1.4vw]'>
                 <li><a className='cursor-pointer hover:textColor' href='#home'>Home</a></li>
                 <li><a className='cursor-pointer hover:textColor' href='#pre-colonial'>Pre-colonial era</a></li>
                 <li><a className='cursor-pointer hover:textColor' href='#colonial-rule'>Colonial rule and resistance groups</a></li>
@@ -287,12 +287,12 @@ export default function Home() {
             </div>
 
             <div className=''>
-              <h2 className='text-xl font-semibold'>Social Links</h2>
-              <ul className='pt-4 flex gap-3'>
-                <a className='footer-links'>
+              <h2 className='text-xl 2xl:text-[1.5vw] font-semibold'>Social Links</h2>
+              <ul className='pt-4 2xl:pt-[1.4vw] flex gap-3 2xl:gap-[1vw]'>
+                <a className='footer-links'  href="https://github.com/jmoseka/jamhuriday" target="_blank">
                   <FiGithub />
                 </a>
-                <a className='footer-links'>
+                <a className='footer-links'  href="https://twitter.com/misaucecode" target="_blank">
                   <FaXTwitter />
                 </a>
               </ul>

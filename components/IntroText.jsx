@@ -1,7 +1,7 @@
 import { useScroll, motion, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-export default function IntroText({ title, subtitle, desc }) {
+export default function IntroText({ title, subtitle, desc,height }) {
   const element = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -15,7 +15,7 @@ export default function IntroText({ title, subtitle, desc }) {
 
   return (
     <div className="intro w-full ">
-      <div className="h-[100%] flex flex-col gap-10 2xl:gap-28 pt-28 xl-pt-32 2xl:pt-[10vw]">
+      <div className="flex flex-col gap-10 2xl:gap-28 mt-28 xl-pt-32 2xl:pt-[10vw]">
         <motion.h2
           ref={element}
           style={{ opacity: scrollYProgress }}

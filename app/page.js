@@ -16,7 +16,10 @@ import moi from '../app/img/postindependence/moi.jpg'
 import protest from '../app/img/postindependence/protest.jpg'
 import kibaki from '../app/img/postindependence/kibaki.jpg'
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 
 
 export default function Home() {
@@ -39,11 +42,14 @@ export default function Home() {
   const smallimages = images.slice(1, 4);
   const [windowWidth, setWindowWidth] = useState(null);
 
+
   const handleWindowResize = () => {
     setWindowWidth(window.innerWidth);
   };
 
   useEffect(() => {
+    AOS.init({ duration: 3000 })
+
     setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleWindowResize);
     // Clean up the event listener when component unmounts
@@ -61,6 +67,9 @@ export default function Home() {
       return [image, ...updatedImages];
     });
   };
+
+
+
 
   return (
     <main className="flex min-h-screen bg-bgcolor
@@ -83,19 +92,21 @@ export default function Home() {
 
       {/* Precolonial section */}
 
-      <section id='pre-colonial' className='px-2 sm:px-[8vw] flex flex-col pb-10'>
+      <section
+        id='pre-colonial'
+        className='px-2 sm:px-[8vw] pb-10'>
 
-        <IntroText
-          title="1000BC - 19TH CE"
-          subtitle="Pre-colonial era"
-          desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
-        />
-
-        <div className='sub-section pt-20 md:pt-10'>
-
-          <PreSection />
-
+        <div className='h-[100vh] mb-28 md:mb-0'>
+          <IntroText
+            title="1000BC - 19TH CE"
+            subtitle="Pre-colonial era"
+            desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
+          />
         </div>
+
+        <PreSection />
+
+
       </section>
 
       {/* line divide  */}
@@ -108,7 +119,7 @@ export default function Home() {
       <section id='colonial-rule'>
 
 
-        <div className='px-2 sm:px-[8vw]'>
+        <div className='px-2 sm:px-[8vw] h-[90vh]'>
           <IntroText
             title="1900 - 1963"
             subtitle="Colonial Rule and Resistance Movements"
@@ -117,17 +128,17 @@ export default function Home() {
         </div>
 
 
-        <div className='pt-20 md:pt-0'>
+        <div data-aos="fade-up" className='md:pt-0'>
           <div className={`relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
             <Image src={maumau} alt='mau mau troops' fill style={{ objectFit: "cover" }} />
           </div>
         </div>
 
         <div className='pb-20 px-2 sm:px-[8vw] flex flex-col gap-8'>
-          <p className='flex items-center justify-center text-center h-[70vh] md:h-[100vh] uppercase 
+          <p data-aos="flip-up" data-aos-duration="6000" className='flex items-center justify-center text-center h-[70vh] md:h-[100vh] uppercase 
             text-6xl md:text-[10rem] 2xl:text-[10vw]
            font-semi-bold md:tracking-normal tracking-wide'>MAU MAU </p>
-          <p className='body-text  '>{mauMauText}</p>
+          <p className='body-text pb-20'>{mauMauText}</p>
         </div>
       </section>
 
@@ -174,11 +185,13 @@ export default function Home() {
 
 
       <section id='jamhuri' className='px-2 sm:px-[8vw] pb-32 md:pb-50 '>
-        <IntroText
-          title="December 12, 1964"
-          subtitle="Jamhuri Day Declaration"
-          desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
-        />
+        <div className='mb-10 md:mb-28'>
+          <IntroText
+            title="December 12, 1964"
+            subtitle="Jamhuri Day Declaration"
+            desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
+          />
+        </div>
 
         <div className='pt-20 md:pt-0'>
           <div className='w-full gallery grid grid-cols-3 gap-10'>
@@ -217,15 +230,19 @@ export default function Home() {
 
       <section id='post-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50'  >
 
-        <IntroText
-          title="Post - Independence"
-          subtitle="A sorveign country"
-          desc="Following its independence from British colonial rule on December 12, 1963, Kenya embarked on a journey of nation-building and self-determination. However, the post-independence era was not without challenges. Political transitions, socio-economic disparities, ethnic tensions, and struggles for democratic governance characterized different phases of Kenya's evolution. Over the decades, the country underwent significant changes, shaping its identity and paving the way for the Kenya we see today."
-        />
+        <div className=' md:mb-20'>
+          <IntroText
+            title="Post - Independence"
+            subtitle="A sorveign country"
+            desc="Following its independence from British colonial rule on December 12, 1963, Kenya embarked on a journey of nation-building and self-determination. However, the post-independence era was not without challenges. Political transitions, socio-economic disparities, ethnic tensions, and struggles for democratic governance characterized different phases of Kenya's evolution. Over the decades, the country underwent significant changes, shaping its identity and paving the way for the Kenya we see today."
+          />
+        </div>
 
-        <div className='pt-16 flex flex-col  gap-20 md:gap-32 2xl:gap-[14vh] '>
+        <div
+          className='pt-16 flex flex-col  gap-20 md:gap-32 2xl:gap-[14vh] '>
 
           <PresentCard
+  
             title='Political Evolution'
             img={moi}
             desc='In the 1980s and 1990s, Kenya saw influential leaders shaping governance, leading to political shifts, transitions, and constitutional reforms. Pro-democracy movements emerged, paving the way for Kenyas transition from a single-party to a multi-party system, fundamentally altering the nations political landscape.'
@@ -233,6 +250,7 @@ export default function Home() {
 
           />
           <PresentCard
+      
             order={2}
             title='Economic Growth and Challenges'
             img={agri}
@@ -247,6 +265,7 @@ export default function Home() {
           />
 
           <PresentCard
+        
             order={2}
             img={protest}
             title='Challenges and Sociopolitical Developments'
@@ -289,10 +308,10 @@ export default function Home() {
             <div className=''>
               <h2 className='text-xl 2xl:text-[1.5vw] font-semibold'>Social Links</h2>
               <ul className='pt-4 2xl:pt-[1.4vw] flex gap-3 2xl:gap-[1vw]'>
-                <a className='footer-links'  href="https://github.com/jmoseka/jamhuriday" target="_blank">
+                <a className='footer-links' href="https://github.com/jmoseka/jamhuriday" target="_blank">
                   <FiGithub />
                 </a>
-                <a className='footer-links'  href="https://twitter.com/misaucecode" target="_blank">
+                <a className='footer-links' href="https://twitter.com/misaucecode" target="_blank">
                   <FaXTwitter />
                 </a>
               </ul>

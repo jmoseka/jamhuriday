@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import PreCard from '@/components/PreCard'
 import Grazing from '../app/img/maasaiherd.png'
 import ethnic from '../app/img/pre/ethnic.jpg'
 import leader from '../app/img/pre/leader.jpg'
 import religion from '../app/img/pre/religion.jpg'
-import 'aos/dist/aos.css'
+
 
 function PreSection() {
 
@@ -66,8 +66,7 @@ function PreSection() {
                 {items.slice(0, displayedItems).map((item, index) => (
                     <div
                         key={index}
-                        data-aos="zoom-in-up"
-                        data-aos-duration="1000"
+                        
                         className={`w-full  ${bigSquare(index) ? '' : 'md:w-[84%]'} ${index % 2 !== 0 ? ' md:place-self-end md:mt-48' : ''}
                             `}
                     >

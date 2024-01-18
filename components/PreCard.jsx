@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useScroll, motion, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import 'aos/dist/aos.css'
 
 export default function PreCard({ title, desc, img, align, order }) {
   const element = useRef(null);
@@ -24,7 +25,11 @@ export default function PreCard({ title, desc, img, align, order }) {
           {desc}
         </motion.p>
 
-        <div className="relative h-[20rem] lg:h-[23rem] xl-[30rem] 2xl:h-[30vw]">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-duration="800"
+          className="relative h-[20rem] lg:h-[23rem] xl-[30rem] 2xl:h-[30vw]"
+        >
           <Image src={img} alt={img} fill fillstyle={{ objectFit: "cover" }} />
         </div>
       </div>

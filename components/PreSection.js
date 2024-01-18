@@ -9,9 +9,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'
 
 function PreSection() {
-    useEffect(() => {
-        AOS.init({duration: 1500})
-    }, [])
+
 
 
     const items = [{
@@ -65,11 +63,12 @@ function PreSection() {
         <div 
         >
 
-            <div  id='content' className="section-body grid gap-y-12  md:gap-y-16 md:grid-cols-2 ">
+            <div  id='content' className=" grid gap-y-12  md:gap-y-16 md:grid-cols-2 ">
                 {items.slice(0, displayedItems).map((item, index) => (
                     <div
                         key={index}
                         data-aos="zoom-in-up"
+                        data-aos-duration="1000"
                         className={`w-full  ${bigSquare(index) ? '' : 'md:w-[84%]'} ${index % 2 !== 0 ? ' md:place-self-end md:mt-48' : ''}
                             `}
                     >

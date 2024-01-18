@@ -13,10 +13,7 @@ export default function PreCard({ title, desc, img, align, order }) {
 
   return (
     <div className="flex flex-col gap-3 2xl:gap-[2.8vw] ">
-      <h2 className={`heading-two textTitle`}>
-        {" "}
-        {title}
-      </h2>
+      <h2 className={`heading-two textTitle`}> {title}</h2>
 
       <div className=" flex flex-col gap-2 2xl:gap-8">
         <motion.p
@@ -27,8 +24,8 @@ export default function PreCard({ title, desc, img, align, order }) {
           {desc}
         </motion.p>
 
-        <div className="relative h-[20rem] xl:h[25vw] 2xl:h-[28vw]">
-          <Image src={img} alt={img} fill fillstyle={{objectFit:"cover"}} />
+        <div className="relative h-[20rem] lg:h-[23rem] xl-[30rem] 2xl:h-[30vw]">
+          <Image src={img} alt={img} fill fillstyle={{ objectFit: "cover" }} />
         </div>
       </div>
     </div>

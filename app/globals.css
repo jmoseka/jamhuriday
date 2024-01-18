@@ -43,16 +43,6 @@ figure {
   flex: 1;
 }
 
-.intro {
-  @apply relative;
-  display: table;
-  background-attachment: fixed;
-}
-
-.sub-section {
-  display: table;
-  background-attachment: fixed;
-}
 
 .line {
   @apply px-1 w-full;

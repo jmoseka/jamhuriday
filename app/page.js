@@ -94,9 +94,9 @@ export default function Home() {
 
       <section
         id='pre-colonial'
-        className='px-2 sm:px-[8vw] flex flex-col pb-10'>
+        className='px-2 sm:px-[8vw] pb-10'>
 
-        <div className='h-[90vh]'>
+        <div className='mb-28 md:mb-0'>
           <IntroText
             title="1000BC - 19TH CE"
             subtitle="Pre-colonial era"
@@ -119,7 +119,7 @@ export default function Home() {
       <section id='colonial-rule'>
 
 
-        <div className='px-2 sm:px-[8vw]'>
+        <div className='px-2 sm:px-[8vw] h-[90vh]'>
           <IntroText
             title="1900 - 1963"
             subtitle="Colonial Rule and Resistance Movements"
@@ -128,17 +128,17 @@ export default function Home() {
         </div>
 
 
-        <div data-aos="fade-up" className='animation md:pt-0'>
+        <div data-aos="fade-up" className='md:pt-0'>
           <div className={`relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
             <Image src={maumau} alt='mau mau troops' fill style={{ objectFit: "cover" }} />
           </div>
         </div>
 
         <div className='pb-20 px-2 sm:px-[8vw] flex flex-col gap-8'>
-          <p data-aos="flip-up" data-aos-duration="1500" className='animation flex items-center justify-center text-center h-[70vh] md:h-[100vh] uppercase 
+          <p data-aos="flip-up" data-aos-duration="5000" className='flex items-center justify-center text-center h-[70vh] md:h-[100vh] uppercase 
             text-6xl md:text-[10rem] 2xl:text-[10vw]
            font-semi-bold md:tracking-normal tracking-wide'>MAU MAU </p>
-          <p className='body-text  '>{mauMauText}</p>
+          <p className='body-text h-[50vh] '>{mauMauText}</p>
         </div>
       </section>
 

@@ -5,7 +5,6 @@ import Grazing from '../app/img/maasaiherd.png'
 import ethnic from '../app/img/pre/ethnic.jpg'
 import leader from '../app/img/pre/leader.jpg'
 import religion from '../app/img/pre/religion.jpg'
-import AOS from 'aos';
 import 'aos/dist/aos.css'
 
 function PreSection() {

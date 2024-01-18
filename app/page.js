@@ -96,7 +96,7 @@ export default function Home() {
         id='pre-colonial'
         className='px-2 sm:px-[8vw] pb-10'>
 
-        <div className='mb-28 md:mb-0'>
+        <div className='h-[100vh] mb-28 md:mb-0'>
           <IntroText
             title="1000BC - 19TH CE"
             subtitle="Pre-colonial era"
@@ -138,7 +138,7 @@ export default function Home() {
           <p data-aos="flip-up" data-aos-duration="6000" className='flex items-center justify-center text-center h-[70vh] md:h-[100vh] uppercase 
             text-6xl md:text-[10rem] 2xl:text-[10vw]
            font-semi-bold md:tracking-normal tracking-wide'>MAU MAU </p>
-          <p className='body-text h-[50vh] '>{mauMauText}</p>
+          <p className='body-text pb-20'>{mauMauText}</p>
         </div>
       </section>
 
@@ -185,11 +185,13 @@ export default function Home() {
 
 
       <section id='jamhuri' className='px-2 sm:px-[8vw] pb-32 md:pb-50 '>
-        <IntroText
-          title="December 12, 1964"
-          subtitle="Jamhuri Day Declaration"
-          desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
-        />
+        <div className='mb-10 md:mb-28'>
+          <IntroText
+            title="December 12, 1964"
+            subtitle="Jamhuri Day Declaration"
+            desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
+          />
+        </div>
 
         <div className='pt-20 md:pt-0'>
           <div className='w-full gallery grid grid-cols-3 gap-10'>
@@ -228,16 +230,19 @@ export default function Home() {
 
       <section id='post-independence' className='px-2 sm:px-[8vw] pb-32 md:pb-50'  >
 
-        <IntroText
-          title="Post - Independence"
-          subtitle="A sorveign country"
-          desc="Following its independence from British colonial rule on December 12, 1963, Kenya embarked on a journey of nation-building and self-determination. However, the post-independence era was not without challenges. Political transitions, socio-economic disparities, ethnic tensions, and struggles for democratic governance characterized different phases of Kenya's evolution. Over the decades, the country underwent significant changes, shaping its identity and paving the way for the Kenya we see today."
-        />
+        <div className=' md:mb-20'>
+          <IntroText
+            title="Post - Independence"
+            subtitle="A sorveign country"
+            desc="Following its independence from British colonial rule on December 12, 1963, Kenya embarked on a journey of nation-building and self-determination. However, the post-independence era was not without challenges. Political transitions, socio-economic disparities, ethnic tensions, and struggles for democratic governance characterized different phases of Kenya's evolution. Over the decades, the country underwent significant changes, shaping its identity and paving the way for the Kenya we see today."
+          />
+        </div>
 
         <div
           className='pt-16 flex flex-col  gap-20 md:gap-32 2xl:gap-[14vh] '>
 
           <PresentCard
+  
             title='Political Evolution'
             img={moi}
             desc='In the 1980s and 1990s, Kenya saw influential leaders shaping governance, leading to political shifts, transitions, and constitutional reforms. Pro-democracy movements emerged, paving the way for Kenyas transition from a single-party to a multi-party system, fundamentally altering the nations political landscape.'
@@ -245,6 +250,7 @@ export default function Home() {
 
           />
           <PresentCard
+      
             order={2}
             title='Economic Growth and Challenges'
             img={agri}
@@ -259,6 +265,7 @@ export default function Home() {
           />
 
           <PresentCard
+        
             order={2}
             img={protest}
             title='Challenges and Sociopolitical Developments'

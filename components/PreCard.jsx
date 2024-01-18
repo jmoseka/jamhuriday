@@ -26,8 +26,8 @@ export default function PreCard({ title, desc, img, align, order }) {
         </motion.p>
 
         <div
-          data-aos="zoom-in-up"
-          data-aos-duration="4000"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
           className="relative h-[20rem] lg:h-[23rem] xl-[30rem] 2xl:h-[30vw]"
         >
           <Image src={img} alt={img} fill fillstyle={{ objectFit: "cover" }} />

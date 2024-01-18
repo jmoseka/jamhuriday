@@ -17,7 +17,9 @@ import protest from '../app/img/postindependence/protest.jpg'
 import kibaki from '../app/img/postindependence/kibaki.jpg'
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
-import { useScroll, motion, useTransform } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 
 
 export default function Home() {
@@ -39,28 +41,15 @@ export default function Home() {
   const [caption, setCaption] = useState(images[0].alt);
   const smallimages = images.slice(1, 4);
   const [windowWidth, setWindowWidth] = useState(null);
-  const ref = useRef(null);
 
-  const { scrollYProgress } = useScroll(
-    {
-      target: ref,
-      offset: ["-0.7 1", "1.33 1"]
-    }
-  )
-
-  const scaleProgress = useTransform(
-    scrollYProgress, [0, 1], [0.7, 1]
-  )
-
-  const opacityProgress = useTransform(
-    scrollYProgress, [0, 1], [0.9, 1]
-  )
 
   const handleWindowResize = () => {
     setWindowWidth(window.innerWidth);
   };
 
   useEffect(() => {
+    AOS.init({ duration: 3000 })
+
     setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleWindowResize);
     // Clean up the event listener when component unmounts
@@ -78,6 +67,7 @@ export default function Home() {
       return [image, ...updatedImages];
     });
   };
+
 
 
 
@@ -102,27 +92,22 @@ export default function Home() {
 
       {/* Precolonial section */}
 
-      <motion.section ref={ref}
-        style={{
-          scale: scaleProgress,
-          opacity: opacityProgress
-        }
-        }
+      <section
         id='pre-colonial'
         className='px-2 sm:px-[8vw] flex flex-col pb-10'>
 
-        <IntroText
-          title="1000BC - 19TH CE"
-          subtitle="Pre-colonial era"
-          desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
-        />
-
-        <div className='sub-section pt-20 md:pt-10'>
-
-          <PreSection />
-
+        <div className='h-[90vh]'>
+          <IntroText
+            title="1000BC - 19TH CE"
+            subtitle="Pre-colonial era"
+            desc="In the precolonial era, Kenya was characterized by diverse and autonomous societies with rich cultural, linguistic, and ethnic diversity. Various ethnic groups, such as the Kikuyu, Luo, Maasai, and others, inhabited distinct regions, each with its own social structures, economic practices, and belief systems. Communities engaged in agriculture, pastoralism, and trade, contributing to a complex tapestry of interconnected societies. The absence of a centralized political authority resulted in localized governance systems, emphasizing communal values and kinship ties."
+          />
         </div>
-      </motion.section>
+
+        <PreSection />
+
+
+      </section>
 
       {/* line divide  */}
 
@@ -143,14 +128,14 @@ export default function Home() {
         </div>
 
 
-        <div className='pt-20 md:pt-0'>
+        <div data-aos="fade-up" className='animation md:pt-0'>
           <div className={`relative ${windowWidth > 700 ? 'h-[100vh]' : 'h-[60vh]'} w-[100%]`}>
             <Image src={maumau} alt='mau mau troops' fill style={{ objectFit: "cover" }} />
           </div>
         </div>
 
         <div className='pb-20 px-2 sm:px-[8vw] flex flex-col gap-8'>
-          <p className='flex items-center justify-center text-center h-[70vh] md:h-[100vh] uppercase 
+          <p data-aos="flip-up" data-aos-duration="1500" className='animation flex items-center justify-center text-center h-[70vh] md:h-[100vh] uppercase 
             text-6xl md:text-[10rem] 2xl:text-[10vw]
            font-semi-bold md:tracking-normal tracking-wide'>MAU MAU </p>
           <p className='body-text  '>{mauMauText}</p>
@@ -249,7 +234,8 @@ export default function Home() {
           desc="Following its independence from British colonial rule on December 12, 1963, Kenya embarked on a journey of nation-building and self-determination. However, the post-independence era was not without challenges. Political transitions, socio-economic disparities, ethnic tensions, and struggles for democratic governance characterized different phases of Kenya's evolution. Over the decades, the country underwent significant changes, shaping its identity and paving the way for the Kenya we see today."
         />
 
-        <div className='pt-16 flex flex-col  gap-20 md:gap-32 2xl:gap-[14vh] '>
+        <div
+          className='pt-16 flex flex-col  gap-20 md:gap-32 2xl:gap-[14vh] '>
 
           <PresentCard
             title='Political Evolution'

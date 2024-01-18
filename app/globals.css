@@ -44,7 +44,7 @@ figure {
 }
 
 .intro {
-  @apply relative h-[100vh];
+  @apply relative;
   display: table;
   background-attachment: fixed;
 }
@@ -106,7 +106,7 @@ figcaption {
 }
 
 .body-text {
-  @apply font-light tracking-wide text-[0.97rem] md:text-base 2xl:text-[1.2vw]  2xl:leading-[1.8vw];
+  @apply font-light tracking-wide text-[0.97rem] md:text-base xl:text-[17px] 2xl:text-[1.2vw]  2xl:leading-[1.8vw];
 }
 
 .textTitle {
@@ -136,5 +136,5 @@ figcaption {
 }
 
 .caption {
-  @apply  pt-1 text-[0.7rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw];
+  @apply pt-1 text-[0.7rem] 2xl:text-[0.7vw] 2xl:leading-[1.4vw];
 }

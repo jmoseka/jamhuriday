@@ -1,12 +1,17 @@
-import { useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import PreCard from '@/components/PreCard'
 import Grazing from '../app/img/maasaiherd.png'
 import ethnic from '../app/img/pre/ethnic.jpg'
 import leader from '../app/img/pre/leader.jpg'
 import religion from '../app/img/pre/religion.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 function PreSection() {
+    useEffect(() => {
+        AOS.init({duration: 1500})
+    }, [])
 
 
     const items = [{
@@ -32,9 +37,6 @@ function PreSection() {
 
     ]
 
-    const cardsPerPage = 2;
-    const totalCards = 4;
-
 
     const bigSquare = (number) => {
         return number % 4 === 0 || number % 4 === 3;
@@ -55,20 +57,19 @@ function PreSection() {
             behavior: 'smooth',
             block: 'start',
         });
-
     };
-
 
 
     return (
 
-        <div>
+        <div 
+        >
 
-            <div id='content' className="section-body grid gap-y-12  md:gap-y-20 md:grid-cols-2 ">
+            <div  id='content' className="section-body grid gap-y-12  md:gap-y-16 md:grid-cols-2 ">
                 {items.slice(0, displayedItems).map((item, index) => (
                     <div
                         key={index}
-
+                        data-aos="zoom-in-up"
                         className={`w-full  ${bigSquare(index) ? '' : 'md:w-[84%]'} ${index % 2 !== 0 ? ' md:place-self-end md:mt-48' : ''}
                             `}
                     >

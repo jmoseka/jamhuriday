@@ -11,10 +11,10 @@ export default function PresentCard({ title, desc, img, order }) {
     <div
       data-aos="zoom-in-up"
       data-aos-duration="800"
-      className="grid md:grid-cols-2  gap-6 md:gap-8"
+      className="grid md:grid-cols-2 gap-6 md:gap-8"
     >
       <div
-        className={`relative h-[20rem] sm:h-[20rem]  2xl:h-[25vw] ${
+        className={`relative h-[15rem] sm:h-[20rem]  2xl:h-[25vw] ${
           order === 2 ? "md:order-2 " : ""
         }
         `}

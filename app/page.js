@@ -242,7 +242,6 @@ export default function Home() {
           className='pt-16 flex flex-col  gap-20 md:gap-32 2xl:gap-[14vh] '>
 
           <PresentCard
-  
             title='Political Evolution'
             img={moi}
             desc='In the 1980s and 1990s, Kenya saw influential leaders shaping governance, leading to political shifts, transitions, and constitutional reforms. Pro-democracy movements emerged, paving the way for Kenyas transition from a single-party to a multi-party system, fundamentally altering the nations political landscape.'
@@ -250,7 +249,6 @@ export default function Home() {
 
           />
           <PresentCard
-      
             order={2}
             title='Economic Growth and Challenges'
             img={agri}

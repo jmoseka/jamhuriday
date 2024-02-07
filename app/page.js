@@ -213,7 +213,7 @@ export default function Home() {
               {smallimages.map((image) => (
                 <button key={image.id} className="small-image flex-1" onClick={() => handleClick(image)}>
                   <div className='relative w-full h-[20vh] md:h-[25vh] xl:h-[35vh]' >
-                    <Image fill style={{ objectFit: "cover" }} src={image.src} alt={image.desc} />
+                    <Image  fill style={{ objectFit: "cover" }} src={image.src} alt={image.desc} />
                   </div>
                 </button>
               ))}

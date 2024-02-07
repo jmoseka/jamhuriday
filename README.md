@@ -1,17 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jamhuri Day Historical Website
 
+##  🔴[LIVE LINK](https://jamhuriday.netlify.app/)
+
+This is a [Next.js](https://nextjs.org/) historical website project aims to provide an in-depth exploration of the history of Kenya, spanning from precolonial times to the present, with a focus on the significance and evolution of Jamhuri Day. Jamhuri Day, celebrated on December 12th, marks the day Kenya attained independence in 1963.
+
+## Features
+- Comprehensive exploration of Kenya's history, including precolonial, colonial, and post-independence eras.
+- Detailed information about precolonial Kenyan societies, their cultures, traditions, and socio-economic structures.
+- Insights into the impact of colonialism on Kenyan communities and the struggle for independence.
+- Examination of the significance and evolution of Jamhuri Day celebrations over time.
+- Discussion on Kenya's progress, challenges, and achievements since independence.
+- Multimedia content including images, videos, and interactive elements to enhance user engagement.
+
+  <hr>
+
+## Built With 🔨
+
+- JavaScript(ES6)
+- NextJS
+- Tailwindcss
+
+### Prerequisites
+
+- IDE (VCode For me 🔥).
+
+### Clone this repository
+
+```bash
+$ git clone https://github.com/jmoseka/jamhuriday.git
+$ cd jamhuriday
+$ npm install
+```
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+next start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -19,6 +44,20 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Author
+
+👤 **Jamila Moseka**
+
+- GitHub: [@jmoseka](https://github.com/jmoseka)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
 
 ## Learn More
 

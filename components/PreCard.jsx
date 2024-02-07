@@ -26,7 +26,7 @@ export default function PreCard({ title, desc, img, align, order }) {
         </motion.p>
 
         <div className="relative h-[17rem] sm:h-[24rem] lg:h-[23rem] xl-[30rem] 2xl:h-[30vw]">
-          <Image src={img} alt={img} fill fillstyle={{ objectFit: "cover" }} />
+          <Image src={img}  alt={img} fill fillstyle={{ objectFit: "cover" }} />
         </div>
       </div>
     </div>

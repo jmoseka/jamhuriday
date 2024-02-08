@@ -135,7 +135,7 @@ export default function Home() {
         </div>
 
         <div className='pb-20 px-2 sm:px-[8vw] flex flex-col gap-8'>
-          <p data-aos="flip-up" data-aos-duration="6000" className='flex items-center justify-center text-center h-[70vh] md:h-[100vh] uppercase 
+          <p data-aos="flip-up" data-aos-duration="2000" className='flex items-center justify-center text-center pt-44 uppercase 
             text-6xl md:text-[10rem] 2xl:text-[10vw]
            font-semi-bold md:tracking-normal tracking-wide'>MAU MAU </p>
           <p className='body-text pb-20'>{mauMauText}</p>
